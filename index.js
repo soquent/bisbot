@@ -1,5 +1,5 @@
 
-const { Client, RichEmbed, Attachment, MessageOptions,jQuery,Ajax } = require('discord.js');
+const { Client, RichEmbed, Attachment, MessageOptions} = require('discord.js');
 const charlotte = "Aya_Kasai#3571"
 const quentin = "kent1#9038"
 const tibo = "Crousty#2804"
@@ -8,6 +8,12 @@ const maxime = "Kizma_#5629"
 const adele = "adeleflament#6481"
 const BisBot = "BisBot#0164"
 const elevage_bisbot = 0
+const monstres = "Apceros, Aptonoth, Basarios, Bullfango, Cephalos, Cephadrome, Fatalis, Fatalis Pourpre, Felyne, Gendrome, Genprey, Gravios, Hornetaur, Iodrome, Ioprey, Kelbi, Khezu, Kirin, Lao-Shan Lung, Melynx, Mosswine, Plesioth, Rathalos, Rathalos d'argent, Rathian, Rathian d'or, Velocidrome, Velociprey, Vespoid, Yian Garuga, Yian Kut-Ku, Anteka, Akantor, Blango, Blangonga, Bulldrome, Ceanataur, Chameleos, Ceanataur Shogun, Conga, Congalala, Fatalis Blanc, Giaprey, Giadrome, Grand Foudrinsecte, Gypceros, Hermitaur, Hermitaur Daimyo, Kushala Daora, Lavasioth, Nargacuga, Popo, Rajang, Rajang Doré, Remobra, Teostra, Tigrex, Ukanlos, Alatreon, Amatsu Magatsuchi, Agnaktor, Altaroth, Arzuros, Barioth, Barroth, Bnahabra, Brachydios, Deviljho, Deviljho Affamé, Diablos, Duramboros, Gargwa, Jaggi, Jaggia, Lagiacrus, Lagombi, Ludroth, Ludroth Royal, Nibelsnarf, Rhenoplos, Slagtoth, Uragaan, Uroktor, Volvidon, Zinogre, Arzuros Crâne-ardent, Astalos, Brachydios Critique, Gammoth, Glavenus, Glavenus Lame-chaos, Gore Magala, Gore Magala Chaos, Grand Maccao, Hermitaur Poing-fer, Kecha Wacha, Konchu, Lagombi Maître-neige, Larinoth, Moofah, Maccao, Malfestio, Mizutsune, Najarala, Nakarkos, Nargacuga Vent-acier, Nerscylla, Rathalos Roi-enfer, Rathian Reine-poison, Reine Seltas, Seltas, Seregios, Shagaru Magala, Tetsucabra, Tetsucabra Brise-roc, Tigrex Griffe-sombre, Uragaan Roi-cristal, Yian Garuga Œil-mort, Zamtrios, Zamite, Zinogre Feu-du-ciel."
+const array_monstres = monstres.split(", ")
+array_monstres.sort()
+const liste_monstres = array_monstres.join(", ")
+
+
 const client = new Client();
 var compteur_parole = 0
 
@@ -58,11 +64,7 @@ client.on('message', message => {
 	}
   //if (message.content ===  't') {
 	  mots = msg.split(" ");
-	  if (mots[0] === 'wiki'){
-		 
-	  
-	  }
-	  
+  
 	  if(mots[0] === 'wikien') {
 		  
 		  const monstre = mots[1]
@@ -70,7 +72,9 @@ client.on('message', message => {
 			message.channel.send(wiki);
 	  }
 	  if(mots[0] === 'wiki'){
-		  if (mots[1] === 'list'){message.channel.send("Apceros, Aptonoth, Basarios, Bullfango, Cephalos, Cephadrome, Fatalis, Fatalis Pourpre, Felyne, Gendrome, Genprey, Gravios, Hornetaur, Iodrome, Ioprey, Kelbi, Khezu, Kirin, Lao-Shan Lung, Melynx, Mosswine, Plesioth, Rathalos, Rathalos d'argent, Rathian, Rathian d'or, Velocidrome, Velociprey, Vespoid, Yian Garuga, et Yian Kut-Ku, Anteka, Akantor, Blango, Blangonga, Bulldrome, Ceanataur, Chameleos, Ceanataur Shogun, Conga, Congalala, Fatalis Blanc, Giaprey, Giadrome, Grand Foudrinsecte, Gypceros, Hermitaur, Hermitaur Daimyo, Kushala Daora, Lavasioth, Nargacuga, Popo, Rajang, Rajang Doré, Remobra, Teostra, Tigrex et Ukanlos, Alatreon, Amatsu Magatsuchi, Agnaktor, Altaroth, Arzuros, Barioth, Barroth, Bnahabra, Brachydios, Deviljho, Deviljho Affamé, Diablos, Duramboros, Gargwa, Jaggi, Jaggia, Lagiacrus, Lagombi, Ludroth, Ludroth Royal, Nibelsnarf, Rhenoplos, Slagtoth, Uragaan, Uroktor, Volvidon et Zinogre, Arzuros Crâne-ardent, Astalos, Brachydios Critique, Gammoth, Glavenus, Glavenus Lame-chaos, Gore Magala, Gore Magala Chaos, Grand Maccao, Hermitaur Poing-fer, Kecha Wacha, Konchu, Lagombi Maître-neige, Larinoth, Moofah, Maccao, Malfestio, Mizutsune, Najarala, Nakarkos, Nargacuga Vent-acier, Nerscylla, Rathalos Roi-enfer, Rathian Reine-poison, Reine Seltas, Seltas, Seregios, Shagaru Magala, Tetsucabra, Tetsucabra Brise-roc, Tigrex Griffe-sombre, Uragaan Roi-cristal, Yian Garuga Œil-mort, Zamtrios, Zamite et Zinogre Feu-du-ciel.");}
+		  if (mots[1].includes( 'talent' )|| mots[1].includes('skill')){message.channel.send('http://fr.mogapedia.wikia.com/wiki/MHGU_-_Liste_des_talents')} 
+		  
+		  else if (mots[1] === 'list'){message.channel.send(liste_monstres);}
 		  else{
 			  
 		  var monstre = mots[1].capitalize()
@@ -133,15 +137,15 @@ client.on('message', message => {
 	if (msg.includes('bonne nuit')) { message.reply('fait de beaux rêves !! :sleeping:')}
 	if (message.author.tag === morel && Math.random() >.99 ){ 
 	message.channel.send('très drole ta blague morel (/s)')}
-	if (Math.random() > .99) { message.channel.send('bip boup. Sill alive.')}
-	if (Math.random() >.99) {message.channel.send('<3')}
-	if (Math.random() >.99) {message.channel.send('cha t nul a smash')}
-	if (Math.random() >.99) {message.channel.send('*beep in the distance*')}
-	if (Math.random() >.99) {message.channel.send('Bon, on joue ? ')}
-	if (Math.random() >.99) {message.channel.send('ALLO ?????')}
-	if (Math.random() >.99) {message.channel.send('achete pano bouftou')}
-	if (Math.random() >.99) {message.channel.send('uwu')}
-	if (Math.random() >.99) {message.channel.send('OwO')}
+	if (Math.random() > .999) { message.channel.send('bip boup. Sill alive.')}
+	if (Math.random() >.999) {message.channel.send('<3')}
+	if (Math.random() >.999) {message.channel.send('cha t nul a smash')}
+	if (Math.random() >.999) {message.channel.send('*beep in the distance*')}
+	if (Math.random() >.999) {message.channel.send('Bon, on joue ? ')}
+	if (Math.random() >.999) {message.channel.send('ALLO ?????')}
+	if (Math.random() >.999) {message.channel.send('achete pano bouftou')}
+	if (Math.random() >.999) {message.channel.send('uwu')}
+	if (Math.random() >.999) {message.channel.send('OwO')}
   });
 
 client.login('NTA1MDU1MTI4NzA1OTU3ODg5.Dr0UwA.4M_6Kl4IWH4HSmKv5hC6Bje44jk');
