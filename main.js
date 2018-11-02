@@ -15,7 +15,7 @@ const liste_monstres = array_monstres.join(", ")
 
 
 const client = new Client(); 
-var compteur_parole = 0
+
 
 String.prototype.capitalize = function() {
 		return this.charAt(0).toUpperCase() + this.slice(1);
@@ -48,19 +48,7 @@ client.on('message', message => {
 	for (var i=0;	i < nbmentions; i++){
 			var m = mentions[i]
 		if (m.tag === "BisBot#0164") {
-	message.reply("coucou :)") }
-		
-		if (m.tag === "Crousty#2804") {
-			if (compteur_parole == 3) {
-				message.reply('tu parles trop.');
-			compteur_parole = 0;
-			}
-			else {
-			compteur_parole+=1;
-			//message.
-			}
-		//message.react(':ok_hand:')
-		}
+	message.reply("coucou :)") }	
 	}
 	
 	
