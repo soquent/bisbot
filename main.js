@@ -14,7 +14,7 @@ array_monstres.sort()
 const liste_monstres = array_monstres.join(", ")
 
 
-const client = new Client(); 
+const client = new Discord.Client(); 
 
 
 String.prototype.capitalize = function() {
@@ -101,7 +101,7 @@ client.on('message', message => {
     message.channel.send(embed);
 	 }
 	if (msg.includes('help')){
-	const embed = new RichEmbed()
+	const embed = new Discord.RichEmbed()
       .setTitle('*bipbip*, besoin d\'aide ?')
       .setColor(0xFF0000)
       .setDescription(":GrdMacacaorel: **MHGU** :dqr: \n-'wiki list' -> liste des monstres \n-'wiki <monstre>' -> lien wiki vers le monstre \n-'wikien <monstre>' -> lien vers la page anglaise du wiki\n\n **Sinon je réagis aux mots :**\nallo, olala, zoe, good bot, big hands, bonne nuit\n\n je dis coucou quand on me mentionne et j'insulte cha quand elle dit que quelque chose est nul.");
@@ -131,7 +131,7 @@ client.on('message', message => {
 	if (msg.includes('big hands')){message.channel.send('miam')}
     if (msg.includes('good bot')) {
 		message.channel.send('hihi : ]');
-        const attachment = new Attachment('http://icons.iconarchive.com/icons/svengraph/daft-punk/512/Daft-Punk-Guyman-Smile-icon.png');
+        const attachment = new Discord.Attachment('http://icons.iconarchive.com/icons/svengraph/daft-punk/512/Daft-Punk-Guyman-Smile-icon.png');
         message.channel.send(attachment);
 	}
 	if (msg.includes('bonne nuit')) { message.reply('fait de beaux rêves !! :sleeping:')}
