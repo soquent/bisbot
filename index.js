@@ -1,6 +1,12 @@
 
 const { Client, RichEmbed, Attachment } = require('discord.js');
-
+const charlotte = "Aya_Kasai#3571"
+const quentin = "kent1#9038"
+const tibo = "Crousty#2804"
+const morel = 'Dysnome#2882'
+const maxime = false
+const adele = false
+const BisBot = "BisBot#0164"
 
 const client = new Client();
 
@@ -11,15 +17,6 @@ var compteur_parole = 0
 
 client.on('message', message => {
 	var msg = message.content.toLowerCase()
-	var charlotte = "Aya_Kasai#3571"
-	var quentin = false
-	var tibo = "Crousty#2804"
-	var morel = 'Dysnome#2882'
-	var maxime = false
-	var adele = false
-	var BisBot = "BisBot#0164"
-	
-	
 	//message.react(message.biscord.emojis.get('oktibo'))
 	var mentions = message.mentions.users.array()
 	var nbmentions = mentions.length
