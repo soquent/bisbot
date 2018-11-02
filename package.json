@@ -1,16 +1,16 @@
 {
 
-  "name": "Test",
+  "name": "Bisbot",
 
-  "description": "Test",
+  "description": "i love daft punk",
 
-  "version": "0.0.0",
+  "version": "1.0.0",
 
-  "main": "bot.js",
+  "main": "main.js",
 
   "scripts": {
 
-    "start": "node bot.js"
+    "start": "node main.js"
 
   },
 
