@@ -4,8 +4,8 @@ const charlotte = "Aya_Kasai#3571"
 const quentin = "kent1#9038"
 const tibo = "Crousty#2804"
 const morel = 'Dysnome#2882'
-const maxime = false
-const adele = false
+const maxime = "Kizma_#5629"
+const adele = "adeleflament#6481"
 const BisBot = "BisBot#0164"
 
 const client = new Client();
