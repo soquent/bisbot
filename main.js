@@ -1,5 +1,5 @@
 
-const { Client, RichEmbed, Attachment} = require('discord.js');
+const Discord = require('discord.js');
 const charlotte = "Aya_Kasai#3571"
 const quentin = "kent1#9038"
 const tibo = "Crousty#2804"
