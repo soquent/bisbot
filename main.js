@@ -94,7 +94,7 @@ client.on('message', message => {
 	
 	 if (msg.includes('allo')){
 		message.channel.send('je suis arrive jusquici');
-    const embed = new RichEmbed()
+    const embed = new Discord.RichEmbed()
       .setTitle('@everyone')
       .setColor(0xFF0000)
       .setDescription(':middle_finger:');
