@@ -1,5 +1,5 @@
 
-const { Client, RichEmbed, Attachment, MessageOptions} = require('discord.js');
+const { Client, RichEmbed, Attachment, MessageOptions,WScript} = require('discord.js');
 const charlotte = "Aya_Kasai#3571"
 const quentin = "kent1#9038"
 const tibo = "Crousty#2804"
@@ -14,7 +14,7 @@ array_monstres.sort()
 const liste_monstres = array_monstres.join(", ")
 
 
-const client = new Client();
+const client = new Client(); 
 var compteur_parole = 0
 
 String.prototype.capitalize = function() {
@@ -44,7 +44,7 @@ client.on('message', message => {
 	//message.react(message.biscord.emojis.get('oktibo'))
 	var mentions = message.mentions.users.array()
 	var nbmentions = mentions.length
-	
+	 
 	for (var i=0;	i < nbmentions; i++){
 			var m = mentions[i]
 		if (m.tag === "BisBot#0164") {
@@ -62,6 +62,11 @@ client.on('message', message => {
 		//message.react(':ok_hand:')
 		}
 	}
+	
+	
+	
+	if (msg.includes('faiblesse')) { var shell = WScript.CreateObject("WScript.Shell");
+	shell.Run("python get_faiblesses.py");}
   //if (message.content ===  't') {
 	  mots = msg.split(" ");
   
@@ -98,6 +103,7 @@ client.on('message', message => {
 		  }
 
   }
+	
 	 if (msg.includes('allo')){
 	
     const embed = new RichEmbed()
@@ -105,10 +111,16 @@ client.on('message', message => {
       .setColor(0xFF0000)
       .setDescription(':middle_finger:');
     message.channel.send(embed);
-	
+	 }
+	if (msg.includes('help')){
+	const embed = new RichEmbed()
+      .setTitle('*bipbip*, besoin d\'aide ?')
+      .setColor(0xFF0000)
+      .setDescription(":GrdMacacaorel: **MHGU** :dqr: \n-'wiki list' -> liste des monstres \n-'wiki <monstre>' -> lien wiki vers le monstre \n-'wikien <monstre>' -> lien vers la page anglaise du wiki\n\n **Sinon je réagis aux mots :**\nallo, olala, zoe, good bot, big hands, bonne nuit\n\n je dis coucou quand on me mentionne et j'insulte cha quand elle dit que quelque chose est nul.");
+    message.channel.send(embed);
   }
 	//if (msg.includes('trig')){message.channel.send('pls trigger '}
-	if (msg.includes(':(')){message.channel.send('Sad beep')}
+
 	if (msg.includes('id du salon')){message.channel.send(String(message.channel.id))}
   
 	if (msg.includes('olala')){
@@ -128,7 +140,7 @@ client.on('message', message => {
   	 if (msg.includes('zoe')){
     message.channel.send("**NON**");
   }
-  
+	if (msg.includes('big hands')){message.channel.send('miam')}
     if (msg.includes('good bot')) {
 		message.channel.send('hihi : ]');
         const attachment = new Attachment('http://icons.iconarchive.com/icons/svengraph/daft-punk/512/Daft-Punk-Guyman-Smile-icon.png');
