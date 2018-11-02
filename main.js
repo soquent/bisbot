@@ -53,8 +53,8 @@ client.on('message', message => {
 	
 	
 	
-	if (msg.includes('faiblesse')) { var shell = WScript.CreateObject("WScript.Shell");
-	shell.Run("python get_faiblesses.py");}
+	//if (msg.includes('faiblesse')) { var shell = WScript.CreateObject("WScript.Shell");
+	//shell.Run("python get_faiblesses.py");}
   //if (message.content ===  't') {
 	  mots = msg.split(" ");
   
@@ -93,7 +93,7 @@ client.on('message', message => {
   }
 	
 	 if (msg.includes('allo')){
-	
+		message.channel.send('je suis arrive jusquici');
     const embed = new RichEmbed()
       .setTitle('@everyone')
       .setColor(0xFF0000)
