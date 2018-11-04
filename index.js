@@ -93,11 +93,15 @@ client.on('message', message => {
   }
 	
 	 if (msg.includes('allo')){
-		message.channel.send('je suis arrive jusquici');
+		message.channel.send('j\'entre dans la condition');
     const embed = new Discord.RichEmbed()
+    message.channel.send('j\'ai réussi à créer le message embed.');
       .setTitle('@everyone')
+		 message.channel.send('j\'ai réussi à créer le titre');
       .setColor(0xFF0000)
+		 message.channel.send('j\'ai réussi à changer la couleur');
       .setDescription(':middle_finger:');
+		 message.channel.send('j\'ai réussi à changer le corps du message');
     message.channel.send(embed);
 	 }
 	if (msg.includes('help')){
