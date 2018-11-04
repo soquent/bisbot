@@ -12,6 +12,9 @@ const monstres = "Apceros, Aptonoth, Basarios, Bullfango, Cephalos, Cephadrome, 
 const array_monstres = monstres.split(", ")
 array_monstres.sort()
 const liste_monstres = array_monstres.join(", ")
+const dqr = client.emojis.find(emoji => emoji.name === "dqr");
+		
+const GrdMacacaorel = client.emojis.find(emoji => emoji.name === "GrdMacacaorel");
 
 
 const client = new Discord.Client(); 
@@ -93,7 +96,7 @@ client.on('message', message => {
   }
 	
 	 if (msg.includes('allo')){
-		 
+		 message.react(dqr.id)
     const embed = new Discord.RichEmbed()
   .setTitle("Tu te crois drôle ?")
   //.setColor(#ebb329)
@@ -103,9 +106,7 @@ client.on('message', message => {
 	 }
 
 	if (msg.includes('help')){
-	const dqr = client.emojis.find(emoji => emoji.name === "dqr");
-		
-	const GrdMacacaorel = client.emojis.find(emoji => emoji.name === "GrdMacacaorel");
+
 		message.reply(`${dqr} ${GrdMacacaorel}`)
 	var titre = "*bipbip*, besoin d\'aide, "
 	if (message.author.tag === tibo) {titre = titre.concat("thibault ?")}
