@@ -99,6 +99,9 @@ client.on('message', message => {
 		  }
 
   }
+	if (message.content === '!react') {
+    message.react('😄');
+}
 	
 	 if (msg.includes('allo')){
 		 //message.channel.send('${dqr}');
