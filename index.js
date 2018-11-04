@@ -102,10 +102,11 @@ client.on('message', message => {
   message.channel.send({embed});
 	 }
 
-	
 	if (msg.includes('help')){
 	const dqr = client.emojis.find(emoji => emoji.name === "dqr");
+		
 	const GrdMacacaorel = client.emojis.find(emoji => emoji.name === "GrdMacacaorel");
+		message.reply(`${dqr} ${GrdMacacaorel}`)
 	var titre = "*bipbip*, besoin d\'aide, "
 	if (message.author.tag === tibo) {titre = titre.concat("thibault ?")}
 	if (message.author.tag === charlotte) {titre = titre.concat("charlotte ?")}
