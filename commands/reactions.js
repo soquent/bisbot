@@ -26,3 +26,5 @@ module.exports = {
         message.reply('fait de beaux rêves !! :sleeping:');
       }
   };
+
+}
