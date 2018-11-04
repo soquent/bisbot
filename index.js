@@ -164,7 +164,7 @@ message.react( GrdMacacaorel);
 	message.channel.send('très drole ta blague morel (/s)')}
 	if (Math.random() > .999) { message.channel.send('bip boup. Sill alive.')}
 	if (Math.random() >.999) {message.channel.send('<3')}
-	if (Math.random() >.999) {message.channel.send('cha t nul a smash')}
+	if (Math.random() >.999) {message.channel.send('c par où la festiv ??')}
 	if (Math.random() >.999) {message.channel.send('*beep in the distance*')}
 	if (Math.random() >.999) {message.channel.send('Bon, on joue ? ')}
 	if (Math.random() >.999) {message.channel.send('ALLO ?????')}
@@ -173,4 +173,4 @@ message.react( GrdMacacaorel);
 	if (Math.random() >.999) {message.channel.send('OwO')}
   });
 
-client.login(token);
+client.login(BOT_TOKEN);
