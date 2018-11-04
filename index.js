@@ -100,7 +100,7 @@ client.on('message', message => {
 
   }
 	if (message.content === '!react') {
-    message.react('😄');
+    message.react(dqr);
 }
 	
 	 if (msg.includes('allo')){
