@@ -34,7 +34,7 @@ client.on('message', message => {
 
 		message.channel.send(`First argument: ${args[0]}`);
 
-	else if (command === 'kick') {
+	if (command === 'kick') {
 		if (!message.mentions.users.size) {
 			return message.reply('you need to tag a user in order to kick them!');
 		}
