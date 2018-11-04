@@ -104,14 +104,18 @@ client.on('message', message => {
 	
 	if (msg.includes('help')){
 	
-	var titre = "*bipbip*, besoin d\'aide "
+	var titre = "*bipbip*, besoin d\'aide, "
 	if (message.author.tag === tibo) {titre = titre.concat("thibault ?")}
 	if (message.author.tag === charlotte) {titre = titre.concat("charlotte ?")}
+	if (message.author.tag === quentin) {titre = titre.concat("quentin ?")}
+	if (message.author.tag === morel) {titre = titre.concat("morel ?")}
+	if (message.author.tag === maxime) {titre = titre.concat("maxime ?")}
+	if (message.author.tag === adele) {titre = titre.concat("adèle ?")}
 	const embed = new Discord.RichEmbed()
   .setTitle(titre)
   .setColor(0x00AE86)
   .setDescription("Voici dont je suis capable pour l'instant :")
-  .setThumbnail("http://images.vogue.it/imgs/galleries/peole-are-talking-about/art-photo-design/019784/moggi-0191-1549088_0x440.jpg")
+  
   .addField(":GrdMacacaorel: MHGU :dqr:",
     "liste des monstres \n-'wiki <monstre>' -> lien wiki vers le monstre \n-'wikien <monstre>' -> lien vers la page anglaise du wiki\n\n ")
   .addField("Sinon je régais aux mots  suivants :", "allo, olala, zoe, good bot, big hands, bonne nuit.", true)
