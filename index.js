@@ -93,19 +93,16 @@ client.on('message', message => {
   }
 	
 	 if (msg.includes('allo')){
-		message.channel.send('j\'entre dans la condition');
+		 
     const embed = new Discord.RichEmbed()
   .setTitle("Tu te crois drôle ?")
   .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
-  /*
-   * Alternatively, use "#00AE86", [0, 174, 134] or an integer number.
-   */
-  .setColor(#ebb329)
+  //.setColor(#ebb329)
   .setDescription(":middle_finger:")
  
   message.channel.send({embed});
-   
 	 }
+	
 	if (msg.includes('help')){
 	const embed = new Discord.RichEmbed()
 	var titre = "*bipbip*, besoin d\'aide "
