@@ -1,5 +1,6 @@
 
 const Discord = require('discord.js');
+const { prefix, token } = require('./config.json');
 const charlotte = "Aya_Kasai#3571"
 const quentin = "kent1#9038"
 const tibo = "Crousty#2804"
@@ -14,7 +15,7 @@ array_monstres.sort()
 const liste_monstres = array_monstres.join(", ")
 
 
-const client = new Discord.Client(); 
+const client = new Discord.Client();
 
 
 
@@ -41,7 +42,7 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
-	
+
 
 	const dqr = message.guild.emojis.find('name', 'dqr');
 	const GrdMacacaorel = message.guild.emojis.find('name', "GrdMacacaorel");
@@ -49,29 +50,29 @@ client.on('message', message => {
 	//message.react(message.biscord.emojis.get('oktibo'))
 	var mentions = message.mentions.users.array()
 	var nbmentions = mentions.length
-	 
+
 	const taggedUser = message.mentions.users.first();
 		if (taggedUser === "BisBot#0164") {
 	message.reply("coucou :)") }
-	
+
 
 	  mots = msg.split(" ");
-  
+
 	  if(mots[0] === 'wikien') { //ouvre le wiki anglais de MHGU
-		  
+
 		  const monstre = mots[1]
 		  const wiki = "https://monsterhunter.fandom.com/wiki/".concat(monstre)
 			message.channel.send(wiki);
 	  }
 	  if(mots[0] === 'wiki'){ //s'occupe de gérer le wiki fr de mhgu
-		  if (mots[1].includes( 'talent' )|| mots[1].includes('skill')){message.channel.send('http://fr.mogapedia.wikia.com/wiki/MHGU_-_Liste_des_talents')} 
-		  
+		  if (mots[1].includes( 'talent' )|| mots[1].includes('skill')){message.channel.send('http://fr.mogapedia.wikia.com/wiki/MHGU_-_Liste_des_talents')}
+
 		  else if (mots[1] === 'list'){message.channel.send(liste_monstres);}
 		  else{
-			  
+
 		  var monstre = mots[1].capitalize()
 		  for (var i = 2; i < mots.length; i++) {
-			
+
 			monstre = monstre.concat("_");
 			if (mots[i].includes("-")) {
 				const [a,b] = mots[i].split("-");
@@ -83,7 +84,7 @@ client.on('message', message => {
 		  monstre = monstre.concat(mots[i].capitalize())
 			}
 		  }
-		
+
 		  const wiki = "http://fr.mogapedia.wikia.com/wiki/".concat(monstre)
 	  message.channel.send(wiki);
 		  }
@@ -93,7 +94,7 @@ client.on('message', message => {
 		const dqr = message.guild.emojis.find('name', 'dqr');
    		 message.react(dqr);
 }
-	
+
 	 if (msg.includes('allo')){
 		 //message.channel.send('${dqr}');
 		// message.react(dqr.id)
@@ -120,30 +121,30 @@ message.react( GrdMacacaorel);
   .setTitle(titre)
   .setColor(0x00AE86)
   .setDescription("Voici dont je suis capable pour l'instant :")
-  
+
   .addField("${GrdMacacaorel} MHGU ${dqr}",
     "-wiki list -> liste des monstres \n-'wiki <monstre>' -> lien wiki vers le monstre \n-'wikien <monstre>' -> lien vers la page anglaise du wiki\n\n ")
   .addField("Sinon je régais aux mots  suivants :", "allo, olala, zoe, good bot, big hands, bonne nuit.", true)
 
   .addBlankField(true)
   .addField("Autres.", "je dis coucou quand on me mentionne et j'insulte cha quand elle dit que quelque chose est nul.", true);
- 
+
   message.channel.send({embed});
-	
+
   }
 	//if (msg.includes('trig')){message.channel.send('pls trigger '}
 
 	if (msg.includes('id du salon')){message.channel.send(String(message.channel.id))}
-  
+
 	if (msg.includes('olala')){
 		if (message.author.tag === tibo) {
 		///	const opt = MessageOptions()
 		//	opt.tts = true
-			
+
 			message.channel.send("tu l'as dit tibo")}
 		else {message.channel.send('quelle vie');}
 	}
-	
+
 	if (msg.includes('nul') && (message.author.tag === charlotte)) {
 		//opt = MessageOptions()
 		//opt.tts = true
@@ -159,7 +160,7 @@ message.react( GrdMacacaorel);
         //message.channel.send('http://icons.iconarchive.com/icons/svengraph/daft-punk/512/Daft-Punk-Guyman-Smile-icon.png');
 	}
 	if (msg.includes('bonne nuit')) { message.reply('fait de beaux rêves !! :sleeping:')}
-	if (message.author.tag === morel && Math.random() >.99 ){ 
+	if (message.author.tag === morel && Math.random() >.99 ){
 	message.channel.send('très drole ta blague morel (/s)')}
 	if (Math.random() > .999) { message.channel.send('bip boup. Sill alive.')}
 	if (Math.random() >.999) {message.channel.send('<3')}
@@ -172,4 +173,4 @@ message.react( GrdMacacaorel);
 	if (Math.random() >.999) {message.channel.send('OwO')}
   });
 
-client.login('NTA1MDU1MTI4NzA1OTU3ODg5.Dr0UwA.4M_6Kl4IWH4HSmKv5hC6Bje44jk');
+client.login(token);
