@@ -101,8 +101,8 @@ client.on('message', message => {
   }
 	
 	 if (msg.includes('allo')){
-		 message.channel.send('${dqr}');
-		 message.react(dqr.id)
+		 //message.channel.send('${dqr}');
+		// message.react(dqr.id)
     const embed = new Discord.RichEmbed()
   .setTitle("Tu te crois drôle ?")
   //.setColor(#ebb329)
@@ -113,7 +113,7 @@ client.on('message', message => {
 
 	if (msg.includes('help')){
 
-		message.reply(`${dqr} ${GrdMacacaorel}`)
+		//message.reply(`${dqr} ${GrdMacacaorel}`)
 	var titre = "*bipbip*, besoin d\'aide, "
 	if (message.author.tag === tibo) {titre = titre.concat("thibault ?")}
 	if (message.author.tag === charlotte) {titre = titre.concat("charlotte ?")}
