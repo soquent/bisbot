@@ -117,7 +117,7 @@ client.on('message', message => {
   .setDescription("Voici dont je suis capable pour l'instant :")
   
   .addField(":GrdMacacaorel: MHGU :dqr:",
-    "liste des monstres \n-'wiki <monstre>' -> lien wiki vers le monstre \n-'wikien <monstre>' -> lien vers la page anglaise du wiki\n\n ")
+    "-wiki list -> liste des monstres \n-'wiki <monstre>' -> lien wiki vers le monstre \n-'wikien <monstre>' -> lien vers la page anglaise du wiki\n\n ")
   .addField("Sinon je régais aux mots  suivants :", "allo, olala, zoe, good bot, big hands, bonne nuit.", true)
 
   .addBlankField(true)
