@@ -18,9 +18,6 @@ const client = new Discord.Client();
 
 
 
-const dqr = message.guild.emojis.find('name', 'dqr');
-const GrdMacacaorel = message.guild.emojis.find('name', "GrdMacacaorel");
-
 
 
 
@@ -48,6 +45,10 @@ client.on('ready', () => {
 
 
 client.on('message', message => {
+	
+
+	const dqr = message.guild.emojis.find('name', 'dqr');
+	const GrdMacacaorel = message.guild.emojis.find('name', "GrdMacacaorel");
 	var msg = message.content.toLowerCase()
 	//message.react(message.biscord.emojis.get('oktibo'))
 	var mentions = message.mentions.users.array()
