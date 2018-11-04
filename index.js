@@ -12,12 +12,17 @@ const monstres = "Apceros, Aptonoth, Basarios, Bullfango, Cephalos, Cephadrome, 
 const array_monstres = monstres.split(", ")
 array_monstres.sort()
 const liste_monstres = array_monstres.join(", ")
+
+
+const client = new Discord.Client(); 
+
+
 const dqr = client.emojis.find(emoji => emoji.name === "dqr");
 		
 const GrdMacacaorel = client.emojis.find(emoji => emoji.name === "GrdMacacaorel");
 
 
-const client = new Discord.Client(); 
+
 
 
 String.prototype.capitalize = function() {
