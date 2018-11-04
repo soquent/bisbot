@@ -7,10 +7,9 @@ module.exports = {
 
         message.channel.send('quelle vie');
       }
-
-
-
+      if (msg.includes('nul')) {
         message.channel.send(':(');
+    }
      if (msg.includes('zoe')) {
 
       message.channel.send("**NON**");
