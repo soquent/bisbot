@@ -1,7 +1,7 @@
 module.exports = {
     name: 'reactions',
     description: 'When i react without prefixes',
-    execute(message) {
+    execute(message, args) {
       if (msg.includes('olala')) {
 
         message.channel.send('quelle vie');
