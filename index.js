@@ -108,10 +108,22 @@ client.on('message', message => {
 	 }
 	if (msg.includes('help')){
 	const embed = new Discord.RichEmbed()
-      .setTitle('*bipbip*, besoin d\'aide ?')
-      .setColor(0xFF0000)
-      .setDescription(":GrdMacacaorel: **MHGU** :dqr: \n-'wiki list' -> liste des monstres \n-'wiki <monstre>' -> lien wiki vers le monstre \n-'wikien <monstre>' -> lien vers la page anglaise du wiki\n\n **Sinon je réagis aux mots :**\nallo, olala, zoe, good bot, big hands, bonne nuit\n\n je dis coucou quand on me mentionne et j'insulte cha quand elle dit que quelque chose est nul.");
-    message.channel.send(embed);
+	var titre = "*bipbip*, besoin d\'aide "
+	if (message.author.tag === thibault) {titre = titre.concat("thibault ?")}
+	if (message.author.tag === charlotte) {titre = titre.concat("charlotte ?")}
+  .setTitle(titre)
+  .setColor(0x00AE86)
+  .setDescription("Voici dont je suis capable pour l'instant :")
+  .setThumbnail("http://images.vogue.it/imgs/galleries/peole-are-talking-about/art-photo-design/019784/moggi-0191-1549088_0x440.jpg")
+  .addField(":GrdMacacaorel: MHGU :dqr:",
+    "liste des monstres \n-'wiki <monstre>' -> lien wiki vers le monstre \n-'wikien <monstre>' -> lien vers la page anglaise du wiki\n\n ")
+  .addField("Sinon je régais aux mots  suivants :", "allo, olala, zoe, good bot, big hands, bonne nuit.", true)
+
+  .addBlankField(true)
+  .addField("Autres.", "je dis coucou quand on me mentionne et j'insulte cha quand elle dit que quelque chose est nul.", true);
+ 
+  message.channel.send({embed});
+	
   }
 	//if (msg.includes('trig')){message.channel.send('pls trigger '}
 
