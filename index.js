@@ -101,12 +101,11 @@ client.on('message', message => {
  
   message.channel.send({embed});
 	 }
-	if(message.content === "ayy") {
-   const ayy = client.emojis.find(emoji => emoji.name === "dqr");
-   message.reply(`${ayy} LMAO`);
-	}
-	if (msg.includes('help')){
+
 	
+	if (msg.includes('help')){
+	const dqr = client.emojis.find(emoji => emoji.name === "dqr");
+	const GrdMacacaorel = client.emojis.find(emoji => emoji.name === "GrdMacacaorel");
 	var titre = "*bipbip*, besoin d\'aide, "
 	if (message.author.tag === tibo) {titre = titre.concat("thibault ?")}
 	if (message.author.tag === charlotte) {titre = titre.concat("charlotte ?")}
@@ -119,7 +118,7 @@ client.on('message', message => {
   .setColor(0x00AE86)
   .setDescription("Voici dont je suis capable pour l'instant :")
   
-  .addField(":GrdMacacaorel: MHGU :dqr:",
+  .addField("${GrdMacacaorel} MHGU ${dqr}",
     "-wiki list -> liste des monstres \n-'wiki <monstre>' -> lien wiki vers le monstre \n-'wikien <monstre>' -> lien vers la page anglaise du wiki\n\n ")
   .addField("Sinon je régais aux mots  suivants :", "allo, olala, zoe, good bot, big hands, bonne nuit.", true)
 
