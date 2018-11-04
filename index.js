@@ -104,7 +104,7 @@ client.on('message', message => {
 	if(message.content === "ayy") {
    const ayy = client.emojis.find(emoji => emoji.name === "dqr");
    message.reply(`${ayy} LMAO`);
-		
+	}
 	if (msg.includes('help')){
 	
 	var titre = "*bipbip*, besoin d\'aide, "
