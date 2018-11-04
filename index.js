@@ -173,4 +173,4 @@ message.react( GrdMacacaorel);
 	if (Math.random() >.999) {message.channel.send('OwO')}
   });
 
-client.login(BOT_TOKEN);
+client.login(token);
