@@ -18,8 +18,8 @@ const client = new Discord.Client();
 
 
 
-		
-const GrdMacacaorel = client.emojis.find(emoji => emoji.name === "GrdMacacaorel");
+const dqr = message.guild.emojis.find('name', 'dqr');
+const GrdMacacaorel = message.guild.emojis.find('name', "GrdMacacaorel");
 
 
 
@@ -111,7 +111,8 @@ client.on('message', message => {
   .setTitle("Tu te crois drôle ?")
   //.setColor(#ebb329)
   .setDescription(":middle_finger:")
- 
+ message.react(dqr);
+message.react( GrdMacacaorel);
   message.channel.send({embed});
 	 }
 
@@ -156,8 +157,8 @@ client.on('message', message => {
 	if (msg.includes('nul') && (message.author.tag === charlotte)) {
 		//opt = MessageOptions()
 		//opt.tts = true
-		message.channel.send('tg cha')}
-	
+		message.channel.send('tg cha');
+		message.react('\:rage:');}
   	 if (msg.includes('zoe')){
     message.channel.send("**NON**");
   }
@@ -165,7 +166,7 @@ client.on('message', message => {
     if (msg.includes('good bot')) {
 	message.react('😄');
 	message.channel.send('hihi : ]');
-        message.channel.send('http://icons.iconarchive.com/icons/svengraph/daft-punk/512/Daft-Punk-Guyman-Smile-icon.png');
+        //message.channel.send('http://icons.iconarchive.com/icons/svengraph/daft-punk/512/Daft-Punk-Guyman-Smile-icon.png');
 	}
 	if (msg.includes('bonne nuit')) { message.reply('fait de beaux rêves !! :sleeping:')}
 	if (message.author.tag === morel && Math.random() >.99 ){ 
