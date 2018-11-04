@@ -7,7 +7,7 @@ module.exports = {
         message.channel.send('quelle vie');
       }
 
-      if (msg.includes('nul')) {
+
 
         message.channel.send(':(');
      if (msg.includes('zoe')) {
@@ -25,6 +25,6 @@ module.exports = {
       if (msg.includes('bonne nuit')) {
         message.reply('fait de beaux rêves !! :sleeping:');
       }
-  };
+  }
 
 }
