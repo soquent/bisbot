@@ -17,7 +17,7 @@ const liste_monstres = array_monstres.join(", ")
 const client = new Discord.Client(); 
 
 
-const dqr = client.emojis.find(emoji => emoji.name === "dqr");
+
 		
 const GrdMacacaorel = client.emojis.find(emoji => emoji.name === "GrdMacacaorel");
 
@@ -100,7 +100,8 @@ client.on('message', message => {
 
   }
 	if (message.content === '!react') {
-    message.react(dqr);
+		const dqr = message.guild.emojis.find('name', 'dqr');
+   		 message.react(dqr);
 }
 	
 	 if (msg.includes('allo')){
@@ -162,7 +163,8 @@ client.on('message', message => {
   }
 	if (msg.includes('big hands')){message.channel.send('miam')}
     if (msg.includes('good bot')) {
-		message.channel.send('hihi : ]');
+	message.react('😄');
+	message.channel.send('hihi : ]');
         message.channel.send('http://icons.iconarchive.com/icons/svengraph/daft-punk/512/Daft-Punk-Guyman-Smile-icon.png');
 	}
 	if (msg.includes('bonne nuit')) { message.reply('fait de beaux rêves !! :sleeping:')}
