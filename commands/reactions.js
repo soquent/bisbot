@@ -2,6 +2,7 @@ module.exports = {
     name: 'reactions',
     description: 'When i react without prefixes',
     execute(message, args) {
+      const msg = message.content.toLowerCase();
       if (msg.includes('olala')) {
 
         message.channel.send('quelle vie');
