@@ -28,7 +28,7 @@ client.on('message', message => {
 		client.commands.get('ping').execute(message, args);
 	}
 
-		if (args[0] === 'foo') {
+	/*	if (args[0] === 'foo') {
 			return message.channel.send('bar');
 		}
 
@@ -53,7 +53,7 @@ client.on('message', message => {
 		});
 
 		message.channel.send(avatarList);
-	}
+	} */
 });
 
 
