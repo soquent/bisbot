@@ -18,10 +18,6 @@ const client = new Discord.Client();
 
 
 
-
-
-
-
 String.prototype.capitalize = function() {
 		return this.charAt(0).toUpperCase() + this.slice(1);
 		}
@@ -54,26 +50,20 @@ client.on('message', message => {
 	var mentions = message.mentions.users.array()
 	var nbmentions = mentions.length
 	 
-	for (var i=0;	i < nbmentions; i++){
-			var m = mentions[i]
-		if (m.tag === "BisBot#0164") {
-	message.reply("coucou :)") }	
+	const taggedUser = message.mentions.users.first();
+		if (taggedUser === "BisBot#0164") {
+	message.reply("coucou :)") }
 	}
-	
-	
-	
-	//if (msg.includes('faiblesse')) { var shell = WScript.CreateObject("WScript.Shell");
-	//shell.Run("python get_faiblesses.py");}
-  //if (message.content ===  't') {
+
 	  mots = msg.split(" ");
   
-	  if(mots[0] === 'wikien') {
+	  if(mots[0] === 'wikien') { //ouvre le wiki anglais de MHGU
 		  
 		  const monstre = mots[1]
 		  const wiki = "https://monsterhunter.fandom.com/wiki/".concat(monstre)
 			message.channel.send(wiki);
 	  }
-	  if(mots[0] === 'wiki'){
+	  if(mots[0] === 'wiki'){ //s'occupe de gérer le wiki fr de mhgu
 		  if (mots[1].includes( 'talent' )|| mots[1].includes('skill')){message.channel.send('http://fr.mogapedia.wikia.com/wiki/MHGU_-_Liste_des_talents')} 
 		  
 		  else if (mots[1] === 'list'){message.channel.send(liste_monstres);}
@@ -82,7 +72,7 @@ client.on('message', message => {
 		  var monstre = mots[1].capitalize()
 		  for (var i = 2; i < mots.length; i++) {
 			
-			monstre = monstre.concat(" ");
+			monstre = monstre.concat("_");
 			if (mots[i].includes("-")) {
 				const [a,b] = mots[i].split("-");
 				monstre = monstre.concat(a.capitalize())
@@ -93,8 +83,7 @@ client.on('message', message => {
 		  monstre = monstre.concat(mots[i].capitalize())
 			}
 		  }
-		  
-		monstre = monstre.replace(' ','_');
+		
 		  const wiki = "http://fr.mogapedia.wikia.com/wiki/".concat(monstre)
 	  message.channel.send(wiki);
 		  }
