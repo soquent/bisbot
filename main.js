@@ -14,12 +14,13 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
 	console.log('I\'m ready !');
-	client.channels.array()[7].send("bip boup. Mise à jour réussie. Je suis opérationnel ! :trumpet:")
+	client.channels.array()[5].send("bip boup. Mise à jour réussie. Je suis opérationnel ! :trumpet:")
 
 });
 
 client.on('message', message => {
-	if (!message.content.startsWith(prefix) || message.author.bot) return;
+	if (!message.content.startsWith(prefix)){client.commands.get('reactions').execute(message);}
+  if (message.author.bot) {return;}
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
@@ -31,7 +32,7 @@ client.on('message', message => {
 	}
 	catch (error) {
 		console.error(error);
-		message.reply('there was an error trying to execute that command!');
+		message.reply('oopsie la commande ne s\'est pas déroulée comme prévue');
 	}
 
 });
