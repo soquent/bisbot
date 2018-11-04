@@ -28,12 +28,12 @@ client.on('message', message => {
 		client.commands.get('ping').execute(message, args);
 	}
 
-		else if (args[0] === 'foo') {
+		if (args[0] === 'foo') {
 			return message.channel.send('bar');
 		}
 
 		message.channel.send(`First argument: ${args[0]}`);
-	
+
 	else if (command === 'kick') {
 		if (!message.mentions.users.size) {
 			return message.reply('you need to tag a user in order to kick them!');
@@ -43,7 +43,7 @@ client.on('message', message => {
 
 		message.channel.send(`You wanted to kick: ${taggedUser.username}`);
 	}
-	else if (command === 'avatar') {
+	if (command === 'avatar') {
 		if (!message.mentions.users.size) {
 			return message.channel.send(`Your avatar: ${message.author.displayAvatarURL}`);
 		}
