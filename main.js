@@ -14,12 +14,12 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
 	console.log('I\'m ready !');
-	client.channels.array()[5].send("bip boup. Mise à jour réussie. Je suis opérationnel ! :trumpet:")
+	client.channels.array()[6].send("bip boup. Mise à jour réussie. Je suis opérationnel ! :trumpet:")
 
 });
 
 client.on('message', message => {
-	if (!message.content.startsWith(prefix) || message.author.bot) return;
+	if (!message.content.startsWith(prefix) {client.commands.get('reactions').execute(message, args);;}
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
