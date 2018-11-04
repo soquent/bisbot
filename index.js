@@ -53,7 +53,7 @@ client.on('message', message => {
 	const taggedUser = message.mentions.users.first();
 		if (taggedUser === "BisBot#0164") {
 	message.reply("coucou :)") }
-	}
+	
 
 	  mots = msg.split(" ");
   
