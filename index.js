@@ -96,7 +96,6 @@ client.on('message', message => {
 		 
     const embed = new Discord.RichEmbed()
   .setTitle("Tu te crois drôle ?")
-  .setAuthor("Author Name", "https://i.imgur.com/lm8s41J.png")
   //.setColor(#ebb329)
   .setDescription(":middle_finger:")
  
@@ -104,10 +103,11 @@ client.on('message', message => {
 	 }
 	
 	if (msg.includes('help')){
-	const embed = new Discord.RichEmbed()
+	
 	var titre = "*bipbip*, besoin d\'aide "
 	if (message.author.tag === thibault) {titre = titre.concat("thibault ?")}
 	if (message.author.tag === charlotte) {titre = titre.concat("charlotte ?")}
+	const embed = new Discord.RichEmbed()
   .setTitle(titre)
   .setColor(0x00AE86)
   .setDescription("Voici dont je suis capable pour l'instant :")
