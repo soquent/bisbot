@@ -25,7 +25,7 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	if (!message.content.startsWith(prefix) {client.commands.get('reactions').execute(message, args);;}
+	if (!message.content.startsWith(prefix)) {client.commands.get('reactions').execute(message, args);}
 
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const command = args.shift().toLowerCase();
