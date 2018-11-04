@@ -101,6 +101,7 @@ client.on('message', message => {
   }
 	
 	 if (msg.includes('allo')){
+		 message.channel.send('${dqr}');
 		 message.react(dqr.id)
     const embed = new Discord.RichEmbed()
   .setTitle("Tu te crois drôle ?")
