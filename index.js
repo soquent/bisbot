@@ -150,9 +150,9 @@ client.on('message', message => {
 	}
 	
 	if (msg.includes('nul') && (message.author.tag === charlotte)) {
-		opt = MessageOptions()
-		opt.tts = true
-		message.channel.send('tg cha',opt)}
+		//opt = MessageOptions()
+		//opt.tts = true
+		message.channel.send('tg cha')}
 	
   	 if (msg.includes('zoe')){
     message.channel.send("**NON**");
