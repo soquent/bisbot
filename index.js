@@ -94,15 +94,11 @@ client.on('message', message => {
 	
 	 if (msg.includes('allo')){
 		message.channel.send('j\'entre dans la condition');
-    const embed = new Discord.RichEmbed()
-    
-      .setTitle('@everyone')
-		 
-      .setColor(0xFF0000)
-		 
-      .setDescription(':middle_finger:');
-		 message.channel.send('j\'ai réussi à changer le corps du message');
-    message.channel.send(embed);
+    message.channel.send({embed: {
+  color: 3447003,
+  description: "A very simple Embed!"
+}});
+   
 	 }
 	if (msg.includes('help')){
 	const embed = new Discord.RichEmbed()
