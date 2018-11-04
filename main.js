@@ -14,7 +14,13 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
 	console.log('I\'m ready !');
-	client.channels.array()[6].send("bip boup. Mise à jour réussie. Je suis opérationnel ! :trumpet:")
+	var chans = client.channels.array()
+	var nbChans = chans.length
+	for (var i=0;	i < nbChans; i++){
+		var c = chans[i]
+		if (c.id === '507693816531386379') {c.send("bip boup. Mise à jour réussie. Je suis opérationnel ! :trumpet:")
+	}
+}
 
 });
 
