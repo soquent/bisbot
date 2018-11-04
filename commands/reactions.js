@@ -1,3 +1,5 @@
+
+
 module.exports = {
     name: 'reactions',
     description: 'When i react without prefixes',
@@ -29,8 +31,8 @@ module.exports = {
         const embed = new Discord.RichEmbed()
         .setTitle("Tu te crois drôle ?")
         .setDescription(":middle_finger:")
-        message.react(dqr);
-        message.react( GrdMacacaorel);
+        //message.react(dqr);
+        //message.react( GrdMacacaorel);
         message.channel.send({embed});
    	 }
   }
