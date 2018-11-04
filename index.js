@@ -105,7 +105,7 @@ client.on('message', message => {
 	if (msg.includes('help')){
 	
 	var titre = "*bipbip*, besoin d\'aide "
-	if (message.author.tag === thibault) {titre = titre.concat("thibault ?")}
+	if (message.author.tag === tibo) {titre = titre.concat("thibault ?")}
 	if (message.author.tag === charlotte) {titre = titre.concat("charlotte ?")}
 	const embed = new Discord.RichEmbed()
   .setTitle(titre)
