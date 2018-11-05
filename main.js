@@ -26,7 +26,6 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	message.channel.send("0");
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 	message.channel.send("1");
 	const args = message.content.slice(prefix.length).split(/ +/);
