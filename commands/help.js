@@ -1,29 +1,39 @@
-const { prefix } = require('../config.json');
-
+const { personnes } = require('../config.json');
+const Discord = require('discord.js');
 module.exports = {
 	name: 'help',
-	description: 'List all of my commands or info about a specific command.',
+	description: 'Donne de l'aide.',
 	aliases: ['commands'],
 	usage: '[command name]',
-	cooldown: 5,
+
 	execute(message, args) {
 		const data = [];
-		const { commands } = message.client; 
+		const { commands } = message.client;
 
 		if (!args.length) {
-			data.push('Here\'s a list of all my commands:');
-			data.push(commands.map(command => command.name).join(', '));
-			data.push(`\nYou can send \`${prefix}help [command name]\` to get info on a specific command!`);
+			var titre = "*bipbip*, besoin d\'aide, "
+			/*if (message.author.tag === tibo) {titre = titre.concat("thibault ?")}
+			if (message.author.tag === charlotte) {titre = titre.concat("charlotte ?")}
+			if (message.author.tag === quentin) {titre = titre.concat("quentin ?")}
+			if (message.author.tag === morel) {titre = titre.concat("morel ?")}
+			if (message.author.tag === maxime) {titre = titre.concat("maxime ?")}
+			if (message.author.tag === adele) {titre = titre.concat("adèle ?")}*/
+			const embed = new Discord.RichEmbed()
+		  .setTitle(titre)
+		  .setColor(0x00AE86)
+		  .setDescription("Voici dont je suis capable pour l'instant :")
 
-			return message.author.send(data, { split: true })
-				.then(() => {
-					if (message.channel.type === 'dm') return;
-					message.reply('I\'ve sent you a DM with all my commands!');
-				})
-				.catch(error => {
-					console.error(`Could not send help DM to ${message.author.tag}.\n`, error);
-					message.reply('it seems like I can\'t DM you!');
-				});
+		  .addField("${GrdMacacaorel} MHGU ${dqr}",
+		    "-wiki list -> liste des monstres \n-'wiki <monstre>' -> lien wiki vers le monstre \n-'wikien <monstre>' -> lien vers la page anglaise du wiki\n\n ")
+		  .addField("Sinon je régais aux mots  suivants :", "allo, olala, zoe, good bot, big hands, bonne nuit.", true)
+
+		  .addBlankField(true)
+		  .addField("Autres.", "je dis coucou quand on me mentionne et j'insulte cha quand elle dit que quelque chose est nul.", true);
+
+		  message.channel.send({embed});
+			message.channel.send(personnes);
+
+		  }
 		}
 
 		const name = args[0].toLowerCase();

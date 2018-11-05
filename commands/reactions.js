@@ -5,7 +5,7 @@ module.exports = {
     name: 'reactions',
     description: 'When i react without prefixes',
     execute(message) {
-      const msg = message.content.toLowerCase(); 
+      const msg = message.content.toLowerCase();
       if (msg.includes('olala')) {
 
         message.channel.send('quelle vie');
@@ -30,8 +30,8 @@ module.exports = {
       }
       if (msg.includes('allo')){
         const embed = new Discord.RichEmbed()
-        .setTitle("Tu te crois drôle ?")
-        .setDescription(":middle_finger:")
+        .setTitle("moshi moshi")
+        .setDescription(":telephone_receiver:")
         //message.react(dqr);
         //message.react( GrdMacacaorel);
         message.channel.send({embed});
