@@ -31,7 +31,7 @@ module.exports = {
 
 
       if (msg.includes('attaque éclair')) {
-        message.reply(':cloud_lightning: :cloud_lightning: :cloud_lightning: \n');
+        message.channel.send(':cloud_lightning: :cloud_lightning: :cloud_lightning: \n');
       }
 
 
