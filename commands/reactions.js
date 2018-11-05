@@ -1,4 +1,5 @@
-
+//C'est ici pour les reactions rigolotes et mignonnes
+//suffit juste de copier/coller la commande et de l'adapter à ta sauce !
 
 module.exports = {
     name: 'reactions',
