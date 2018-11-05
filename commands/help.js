@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
 	name: 'help',
 	description: 'Donne de l\'aide.',
-	aliases: ['commands'],
+	aliases: ['aide'],
 	usage: '[command name]',
 
 	execute(message, args) {
@@ -12,12 +12,12 @@ module.exports = {
 
 		if (!args.length) {
 			var titre = "*bipbip*, besoin d\'aide, "
-			/*if (message.author.tag === tibo) {titre = titre.concat("thibault ?")}
-			if (message.author.tag === charlotte) {titre = titre.concat("charlotte ?")}
-			if (message.author.tag === quentin) {titre = titre.concat("quentin ?")}
-			if (message.author.tag === morel) {titre = titre.concat("morel ?")}
-			if (message.author.tag === maxime) {titre = titre.concat("maxime ?")}
-			if (message.author.tag === adele) {titre = titre.concat("adèle ?")}*/
+			(message.author.tag === personnes['tibo']) {titre = titre.concat("thibault ?")}
+			if (message.author.tag === personnes['charlotte']) {titre = titre.concat("charlotte ?")}
+			if (message.author.tag === personnes['quentin']) {titre = titre.concat("quentin ?")}
+			if (message.author.tag === personnes['morel']) {titre = titre.concat("morel ?")}
+			if (message.author.tag === personnes['maxime']) {titre = titre.concat("maxime ?")}
+			if (message.author.tag === personnes['adele']) {titre = titre.concat("adèle ?")}
 			const embed = new Discord.RichEmbed()
 		  .setTitle(titre)
 		  .setColor(0x00AE86)
@@ -31,8 +31,6 @@ module.exports = {
 		  .addField("Autres.", "je dis coucou quand on me mentionne et j'insulte cha quand elle dit que quelque chose est nul.", true);
 
 		  message.channel.send({embed});
-			message.channel.send(personnes);
-			message.channel.send(personnes['tibo']);
 			return;
 
 		}
