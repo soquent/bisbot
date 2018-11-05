@@ -4,25 +4,25 @@ module.exports = {
     execute(message, args) {
       const msg = message.content.toLowerCase();
 
-  		  if (mots[0].includes( 'talent' )|| mots[0].includes('skill')){message.channel.send('http://fr.mogapedia.wikia.com/wiki/MHGU_-_Liste_des_talents')}
+  		  if (args[0].includes( 'talent' )|| args[0].includes('skill')){message.channel.send('http://fr.mogapedia.wikia.com/wiki/MHGU_-_Liste_des_talents')}
 
-  		  if (mots[0] === 'list'){message.channel.send(liste_monstres);}
+  		  if (args[0] === 'list'){message.channel.send(liste_monstres);}
 
         else{
 
 
-  		      var monstre = mots[0].capitalize()
-  		        for (var i = 1; i < mots.length; i++) {
+  		      var monstre = args[0].capitalize()
+  		        for (var i = 1; i < args.length; i++) {
 
   			           monstre = monstre.concat("_");
-  			              if (mots[i].includes("-")) {
-  				                    const [a,b] = mots[i].split("-");
+  			              if (args[i].includes("-")) {
+  				                    const [a,b] = args[i].split("-");
   				                    monstre = monstre.concat(a.capitalize());
   				                    monstre = monstre.concat("-");
   				                    monstre = monstre.concat(b.capitalize());
   			                       }
   			           else{
-  		                  monstre = monstre.concat(mots[i].capitalize())
+  		                  monstre = monstre.concat(args[i].capitalize())
   			                 }
   		  }
 
