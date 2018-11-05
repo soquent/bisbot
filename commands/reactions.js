@@ -20,7 +20,7 @@ module.exports = {
         message.channel.send('miam')
       }
       if (msg.includes('good bot')) {
-        message.react('\:blush:');
+        message.react('😄');
         message.channel.send('hihi : ]');
         //message.channel.send('http://icons.iconarchive.com/icons/svengraph/daft-punk/512/Daft-Punk-Guyman-Smile-icon.png');
       }
