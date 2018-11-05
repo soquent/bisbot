@@ -1,6 +1,6 @@
 const fs = require('fs');
 const Discord = require('discord.js');
-const prefix = require('./config.json');
+//const prefix = require('./config.json');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
@@ -26,21 +26,21 @@ client.once('ready', () => {
 
 client.on('message', message => {
 	if (message.author.bot) {return;}
-	message.channel.send("0");
+
 	if (!message.content.startsWith(prefix)) {client.commands.get('reactions').execute(message);}
-	message.channel.send("1");
-	const args = message.content.slice(prefix.length).split(/ +/);
+
+	const args = message.content.slice().split(/ +/);
 	const commandName = args.shift().toLowerCase();
 
 	const command = client.commands.get(commandName)
 		|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
 	if (!command) return;
-	message.channel.send("2");
+
 	if (command.guildOnly && message.channel.type !== 'text') {
 		return message.reply('I can\'t execute that command inside DMs!');
 	}
-	message.channel.send("3");
+
 	if (command.args && !args.length) {
 		let reply = `You didn't provide any arguments, ${message.author}!`;
 
@@ -50,11 +50,11 @@ client.on('message', message => {
 
 		return message.channel.send(reply);
 	}
-	message.channel.send("4");
+
 	if (!cooldowns.has(command.name)) {
 		cooldowns.set(command.name, new Discord.Collection());
 	}
-	message.channel.send("5");
+
 	const now = Date.now();
 	const timestamps = cooldowns.get(command.name);
 	const cooldownAmount = (command.cooldown || 3) * 1000;
