@@ -5,7 +5,13 @@ module.exports = {
     name: 'reactions',
     description: 'Réactions aux messages sans préfixes.',
     execute(message) {
+
       const msg = message.content.toLowerCase();
+
+      if(message.isMentioned(Client.user)){
+        message.channel.send('Coucou ${message.author} :blush: ')
+      }
+
       if (msg.includes('olala')) {
 
         message.channel.send('quelle vie');

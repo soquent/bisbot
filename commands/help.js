@@ -12,12 +12,12 @@ module.exports = {
 
 		if (!args.length) {
 			var titre = "*bipbip*, besoin d\'aide, ";
-			if (message.author.tag === personnes['tibo']) {titre = titre.concat("thibault ?")}
-			if (message.author.tag === personnes['charlotte']) {titre = titre.concat("charlotte ?")}
-			if (message.author.tag === personnes['quentin']) {titre = titre.concat("quentin ?")}
-			if (message.author.tag === personnes['morel']) {titre = titre.concat("morel ?")}
-			if (message.author.tag === personnes['maxime']) {titre = titre.concat("maxime ?")}
-			if (message.author.tag === personnes['adele']) {titre = titre.concat("adèle ?")}
+			if (message.author.tag === personnes['tibo']) {titre = titre.concat("Thibault ?")}
+			if (message.author.tag === personnes['charlotte']) {titre = titre.concat("Charlotte ?")}
+			if (message.author.tag === personnes['quentin']) {titre = titre.concat("Quentin ?")}
+			if (message.author.tag === personnes['morel']) {titre = titre.concat("Morel ?")}
+			if (message.author.tag === personnes['maxime']) {titre = titre.concat("Maxime ?")}
+			if (message.author.tag === personnes['adele']) {titre = titre.concat("Adèle ?")}
 			const embed = new Discord.RichEmbed()
 		  .setTitle(titre)
 		  .setColor(0x00AE86)
