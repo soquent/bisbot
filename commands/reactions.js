@@ -6,11 +6,11 @@ const { personnes,id } = require('../config.json');
 module.exports = {
     name: 'reactions',
     description: 'Réactions aux messages sans préfixes.',
-    execute(message,client) {
+    execute(message) {
 
       const msg = message.content.toLowerCase();
 
-      if(message.isMentioned(client.user)){
+      if(message.isMentioned(id['bisbot'])){
         message.channel.send('Coucou @${message.author} :blush: ')
       }
 

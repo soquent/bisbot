@@ -1,6 +1,8 @@
+//Touchez pas à ça, sinon ça casse tout
+
 const fs = require('fs');
 const Discord = require('discord.js');
-//const prefix = require('./config.json');
+//const {prefix} = require('./config.json');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
@@ -38,11 +40,11 @@ client.on('message', message => {
 	if (!command) return;
 
 	if (command.guildOnly && message.channel.type !== 'text') {
-		return message.reply('I can\'t execute that command inside DMs!');
+		return message.reply('J\'peut pas faire ça en dm.....');
 	}
 
 	if (command.args && !args.length) {
-		let reply = `You didn't provide any arguments, ${message.author}!`;
+		let reply = `Donne moi des arguments stp, ${message.author}!`;
 
 		if (command.usage) {
 			reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
