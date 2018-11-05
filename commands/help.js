@@ -23,9 +23,9 @@ module.exports = {
 		  .setColor(0x00AE86)
 		  .setDescription("Voici dont je suis capable pour l'instant :")
 
-		  .addField("${GrdMacacaorel} MHGU ${dqr}",
-		    "-wiki list -> liste des monstres \n-'wiki <monstre>' -> lien wiki vers le monstre \n-'wikien <monstre>' -> lien vers la page anglaise du wiki\n\n ")
-		  .addField("Sinon je régais aux mots  suivants :", "allo, olala, zoe, good bot, big hands, bonne nuit.", true)
+		  .addField("MHGU :",
+		    "-'wiki list' -> liste des monstres \n-'wiki <monstre>' -> lien wiki vers le monstre \n-'wikien <monstre>' -> lien vers la page anglaise du wiki\n\n ")
+		  .addField("Sinon je réagis aux mots  suivants :", "allo, olala, zoe, good bot, big hands, bonne nuit.", true)
 
 		  .addBlankField(true)
 		  .addField("Autres.", "je dis coucou quand on me mentionne et j'insulte cha quand elle dit que quelque chose est nul.", true);

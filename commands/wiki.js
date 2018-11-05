@@ -1,7 +1,7 @@
 const {monstres} = require('../config.json');
 module.exports = {
     name: 'wiki',
-    description: 'link to mhgu wiki',
+    description: 'Je donne divers liens vers le wiki de MHGU',
     execute(message, args) {
       function capitalize(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);

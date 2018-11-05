@@ -3,7 +3,7 @@
 const Discord = require('discord.js');
 module.exports = {
     name: 'reactions',
-    description: 'When i react without prefixes',
+    description: 'Réactions aux messages sans préfixes.',
     execute(message) {
       const msg = message.content.toLowerCase();
       if (msg.includes('olala')) {
