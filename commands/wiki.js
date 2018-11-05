@@ -1,3 +1,4 @@
+const {liste } = require('../config.json');
 module.exports = {
     name: 'wiki',
     description: 'link to mhgu wiki',
