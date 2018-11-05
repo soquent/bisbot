@@ -28,10 +28,17 @@ module.exports = {
       if (msg.includes('bonne nuit')) {
         message.reply('fait de beaux rêves !! :sleeping:');
       }
+
+
+      if (msg.includes('attaque éclair')) {
+        message.reply(':cloud_lightning: :cloud_lightning: :cloud_lightning: \n');
+      }
+
+
       if (msg.includes('allo')){
         const embed = new Discord.RichEmbed()
         .setTitle("moshi moshi")
-        .setDescription(":telephone_receiver:")
+        .setDescription(":telephone:")
         .setColor(0xFA0000);
         //message.react(dqr);
         //message.react( GrdMacacaorel);
