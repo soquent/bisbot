@@ -20,21 +20,19 @@ module.exports = {
         message.channel.send('miam')
       }
       if (msg.includes('good bot')) {
-        message.react('😄');
+        message.react('\:blush:');
         message.channel.send('hihi : ]');
         //message.channel.send('http://icons.iconarchive.com/icons/svengraph/daft-punk/512/Daft-Punk-Guyman-Smile-icon.png');
       }
       if (msg.includes('bonne nuit')) {
         message.reply('fait de beaux rêves !! :sleeping:');
       }
-      /*if (msg.includes('allo')){
-        const embed = new Discord.RichEmbed()
-        .setTitle("Tu te crois drôle ?")
-        .setDescription(":middle_finger:")
+      //if (msg.includes('allo')){
+        //const embed = new Discord.RichEmbed()
+        //.setTitle("Tu te crois drôle ?")
+      //  .setDescription(":middle_finger:")
         //message.react(dqr);
         //message.react( GrdMacacaorel);
-        message.channel.send({embed});
-   	 }*/
-  }
-
+      //  message.channel.send({embed});
+   	}
 }

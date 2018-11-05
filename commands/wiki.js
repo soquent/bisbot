@@ -4,9 +4,10 @@ module.exports = {
     execute(message, args) {
       const msg = message.content.toLowerCase();
 
-  		  if (args[0].includes( 'talent' )|| args[0].includes('skill')){message.channel.send('http://fr.mogapedia.wikia.com/wiki/MHGU_-_Liste_des_talents')}
+  		  if (args[0].includes( 'talent' )|| args[0].includes('skill'))
+            {message.channel.send('http://fr.mogapedia.wikia.com/wiki/MHGU_-_Liste_des_talents')}
 
-  		  if (args[0] === 'list'){message.channel.send(liste_monstres);}
+  		  else if (args[0] === 'list'){message.channel.send(liste_monstres);}
 
         else{
 
