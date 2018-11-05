@@ -14,4 +14,5 @@ module.exports = {
       if (Math.random() >.999) {message.channel.send('achete pano bouftou')}
       if (Math.random() >.999) {message.channel.send('uwu')}
       if (Math.random() >.999) {message.channel.send('OwO')}
-      });
+    }
+}
