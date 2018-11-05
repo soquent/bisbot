@@ -32,6 +32,7 @@ module.exports = {
         const embed = new Discord.RichEmbed()
         .setTitle("moshi moshi")
         .setDescription(":telephone_receiver:")
+        .setColor(0xFA0000);
         //message.react(dqr);
         //message.react( GrdMacacaorel);
         message.channel.send({embed});
