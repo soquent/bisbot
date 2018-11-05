@@ -11,8 +11,8 @@ module.exports = {
 		const { commands } = message.client;
 
 		if (!args.length) {
-			var titre = "*bipbip*, besoin d\'aide, "
-			(message.author.tag === personnes['tibo']) {titre = titre.concat("thibault ?")}
+			var titre = "*bipbip*, besoin d\'aide, ";
+			if (message.author.tag === personnes['tibo']) {titre = titre.concat("thibault ?")}
 			if (message.author.tag === personnes['charlotte']) {titre = titre.concat("charlotte ?")}
 			if (message.author.tag === personnes['quentin']) {titre = titre.concat("quentin ?")}
 			if (message.author.tag === personnes['morel']) {titre = titre.concat("morel ?")}
