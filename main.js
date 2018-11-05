@@ -27,7 +27,7 @@ client.once('ready', () => {
 client.on('message', message => {
 	if (message.author.bot) {return;}
 
-	if (!message.content.startsWith(prefix)) {client.commands.get('reactions').execute(message);}
+	client.commands.get('reactions').execute(message);
 
 	const args = message.content.slice().split(/ +/);
 	const commandName = args.shift().toLowerCase();
@@ -80,7 +80,7 @@ client.on('message', message => {
 	}
 	catch (error) {
 		console.error(error);
-		message.reply('there was an error trying to execute that command!');
+		message.reply('olala bip boup quelque chose s\'est mal passé, cette commande est probablement mal codée......');
 	}
 });
 
