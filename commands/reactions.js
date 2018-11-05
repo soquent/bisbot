@@ -1,7 +1,7 @@
 //C'est ici pour les reactions rigolotes et mignonnes
 //suffit juste de copier/coller la commande et de l'adapter à ta sauce !
 const Discord = require('discord.js');
-const { personnes,id } = require('../config.json');
+const { personnes,id,csmiley } = require('../config.json');
 
 module.exports = {
     name: 'reactions',
@@ -22,7 +22,7 @@ module.exports = {
         message.channel.send('Je suis désolé :(');
 
     }
-     if (msg.includes('zoe')) {
+      if (msg.includes('zoe')) {
 
       message.channel.send("**NON**");
       }
@@ -45,12 +45,13 @@ module.exports = {
 
 
       if (msg.includes('allo')){
+
         const embed = new Discord.RichEmbed()
         .setTitle("moshi moshi")
         .setDescription(":telephone:")
         .setColor(0xFA0000);
-        //message.react(dqr);
-        //message.react( GrdMacacaorel);
+        message.react(csmiley['dqr']);
+        message.react(csmiley['GrdMacacaorel']);
         message.channel.send({embed});
    	}
   }
