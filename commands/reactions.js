@@ -50,8 +50,8 @@ module.exports = {
         .setTitle("moshi moshi")
         .setDescription(":telephone:")
         .setColor(0xFA0000);
-        message.react(csmiley['dqr']);
-        message.react(csmiley['GrdMacacaorel']);
+        message.react(message.guild.emojis.get(csmiley['dqr']));
+        message.react(message.guild.emojis.get(csmiley['GrdMacacaorel']));
         message.channel.send({embed});
    	}
   }
