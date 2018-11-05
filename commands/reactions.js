@@ -1,6 +1,7 @@
 //C'est ici pour les reactions rigolotes et mignonnes
 //suffit juste de copier/coller la commande et de l'adapter à ta sauce !
 const Discord = require('discord.js');
+
 module.exports = {
     name: 'reactions',
     description: 'Réactions aux messages sans préfixes.',
@@ -8,7 +9,7 @@ module.exports = {
 
       const msg = message.content.toLowerCase();
 
-      if(message.isMentioned(Client.user)){
+      if(message.isMentioned(client.user)){
         message.channel.send('Coucou ${message.author} :blush: ')
       }
 
