@@ -1,4 +1,4 @@
-const {liste } = require('../config.json');
+const {monstres} = require('../config.json');
 module.exports = {
     name: 'wiki',
     description: 'link to mhgu wiki',
@@ -11,7 +11,7 @@ module.exports = {
   		  if (args[0].includes( 'talent' )|| args[0].includes('skill'))
             {message.channel.send('http://fr.mogapedia.wikia.com/wiki/MHGU_-_Liste_des_talents')}
 
-  		  else if (args[0] === 'list'){message.channel.send(liste.split(", ").sort().join(", "));}
+  		  else if (args[0] === 'list'){message.channel.send(monstres.split(", ").sort().join(", "));}
 
         else{
 
