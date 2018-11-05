@@ -33,7 +33,7 @@ module.exports = {
 		  message.channel.send({embed});
 			message.channel.send(personnes);
 
-		  }
+		 
 		}
 
 		const name = args[0].toLowerCase();
