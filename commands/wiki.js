@@ -15,18 +15,18 @@ module.exports = {
         else{
 
 
-  		      var monstre = args[0].capitalize()
+  		      var monstre = capitalize(args[0])
   		        for (var i = 1; i < args.length; i++) {
 
   			           monstre = monstre.concat("_");
   			              if (args[i].includes("-")) {
   				                    const [a,b] = args[i].split("-");
-  				                    monstre = monstre.concat(a.capitalize());
+  				                    monstre = monstre.concat(capitalize(a));
   				                    monstre = monstre.concat("-");
-  				                    monstre = monstre.concat(b.capitalize());
+  				                    monstre = monstre.concat(capitalize(b));
   			                       }
   			           else{
-  		                  monstre = monstre.concat(args[i].capitalize())
+  		                  monstre = monstre.concat(capitalize(args[i]))
   			                 }
   		  }
 
