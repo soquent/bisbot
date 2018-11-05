@@ -6,12 +6,12 @@ const { personnes,id } = require('../config.json');
 module.exports = {
     name: 'reactions',
     description: 'Réactions aux messages sans préfixes.',
-    execute(message) {
+    execute(message,client) {
 
       const msg = message.content.toLowerCase();
 
-      if(message.isMentioned(id['bisbot'])){
-        message.channel.send('Coucou ${message.author} :blush: ')
+      if(message.isMentioned(client.user)){
+        message.channel.send('Coucou @${message.author} :blush: ')
       }
 
       if (msg.includes('olala')) {
@@ -32,7 +32,7 @@ module.exports = {
       if (msg.includes('good bot')) {
         message.react('😄');
         message.channel.send('hihi : ]');
-        message.channel.send('${http://icons.iconarchive.com/icons/svengraph/daft-punk/512/Daft-Punk-Guyman-Smile-icon.png}');
+      //  message.channel.send('${http://icons.iconarchive.com/icons/svengraph/daft-punk/512/Daft-Punk-Guyman-Smile-icon.png}');
       }
       if (msg.includes('bonne nuit')) {
         message.reply('fait de beaux rêves !! :sleeping:');
