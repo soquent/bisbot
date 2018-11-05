@@ -36,4 +36,5 @@ module.exports = {
         //message.react( GrdMacacaorel);
         message.channel.send({embed});
    	}
+  }
 }
