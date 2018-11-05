@@ -26,3 +26,6 @@ module.exports = {
 
   		  const wiki = "http://fr.mogapedia.wikia.com/wiki/".concat(monstre)
   	  message.channel.send(wiki);
+}
+}
+}
