@@ -1,6 +1,6 @@
 //C'est ici pour les reactions rigolotes et mignonnes
 //suffit juste de copier/coller la commande et de l'adapter à ta sauce !
-
+const Discord = require('discord.js');
 module.exports = {
     name: 'reactions',
     description: 'When i react without prefixes',
@@ -28,12 +28,12 @@ module.exports = {
       if (msg.includes('bonne nuit')) {
         message.reply('fait de beaux rêves !! :sleeping:');
       }
-      //if (msg.includes('allo')){
-        //const embed = new Discord.RichEmbed()
-        //.setTitle("Tu te crois drôle ?")
-      //  .setDescription(":middle_finger:")
+      if (msg.includes('allo')){
+        const embed = new Discord.RichEmbed()
+        .setTitle("Tu te crois drôle ?")
+        .setDescription(":middle_finger:")
         //message.react(dqr);
         //message.react( GrdMacacaorel);
-      //  message.channel.send({embed});
+        message.channel.send({embed});
    	}
 }
