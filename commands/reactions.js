@@ -27,14 +27,14 @@ module.exports = {
       if (msg.includes('bonne nuit')) {
         message.reply('fait de beaux rêves !! :sleeping:');
       }
-      if (msg.includes('allo')){
+      /*if (msg.includes('allo')){
         const embed = new Discord.RichEmbed()
         .setTitle("Tu te crois drôle ?")
         .setDescription(":middle_finger:")
         //message.react(dqr);
         //message.react( GrdMacacaorel);
         message.channel.send({embed});
-   	 }
+   	 }*/
   }
 
 }
