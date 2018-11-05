@@ -17,7 +17,7 @@ const cooldowns = new Discord.Collection();
 
 client.once('ready', () => {
 	console.log('Ready!');
-	const edbisbot = let guild = client.channels.find(channel => channel.name === "élevage-du-bisbot");
+	const edbisbot = client.channels.find(channel => channel.name === "élevage-du-bisbot");
 	edbisbot.send("bip boup. Mise à jour réussie. Je suis opérationnel ! :trumpet:");
 });
 
