@@ -2,7 +2,7 @@ const { personnes } = require('../config.json');
 const Discord = require('discord.js');
 module.exports = {
 	name: 'help',
-	description: 'Donne de l'aide.',
+	description: 'Donne de l\'aide.',
 	aliases: ['commands'],
 	usage: '[command name]',
 
@@ -33,7 +33,7 @@ module.exports = {
 		  message.channel.send({embed});
 			message.channel.send(personnes);
 
-		 
+
 		}
 
 		const name = args[0].toLowerCase();
