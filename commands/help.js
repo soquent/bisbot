@@ -31,7 +31,7 @@ module.exports = {
 		  .addField("Autres.", "je dis coucou quand on me mentionne et j'insulte cha quand elle dit que quelque chose est nul.", true);
 
 		  message.channel.send({embed});
-			message.channel.send(personnes);
+			message.channel.send(personnes['tibo']);
 			return;
 
 		}
