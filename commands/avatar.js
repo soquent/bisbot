@@ -4,7 +4,7 @@ module.exports = {
 	aliases: ['icon', 'pfp'],
 	execute(message) {
 		if (!message.mentions.users.size) {
-			return message.channel.send(`Your avatar: ${message.author.displayAvatarURL}`);
+			return message.channel.send(`Vla ta ptite photo: ${message.author.displayAvatarURL}`);
 		}
 
 		const avatarList = message.mentions.users.map(user => {

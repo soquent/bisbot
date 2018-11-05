@@ -11,13 +11,13 @@ module.exports = {
 		const { commands } = message.client;
 
 		if (!args.length) {
-			var titre = "*bipbip*, besoin d\'aide, ";
-			if (message.author.tag === personnes['tibo']) {titre = titre.concat("Thibault ?")}
+			var titre = "*bipbip*, besoin d\'aide, ".concat(message.author.username).concat(" ?");
+			/*if (message.author.tag === personnes['tibo']) {titre = titre.concat("Thibault ?")}
 			if (message.author.tag === personnes['charlotte']) {titre = titre.concat("Charlotte ?")}
 			if (message.author.tag === personnes['quentin']) {titre = titre.concat("Quentin ?")}
 			if (message.author.tag === personnes['morel']) {titre = titre.concat("Morel ?")}
 			if (message.author.tag === personnes['maxime']) {titre = titre.concat("Maxime ?")}
-			if (message.author.tag === personnes['adele']) {titre = titre.concat("Adèle ?")}
+			if (message.author.tag === personnes['adele']) {titre = titre.concat("Adèle ?")}*/
 			const embed = new Discord.RichEmbed()
 		  .setTitle(titre)
 		  .setColor(0x00AE86)
