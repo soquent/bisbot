@@ -18,7 +18,7 @@ module.exports = {
 
         message.channel.send('quelle vie');
       }
-      if (msg.includes('nul') && message.author.id === personnes['charlotte']) {
+      if (msg.includes('nul') && message.author.id === id['charlotte']) {
         message.channel.send('Je suis désolé :(');
 
     }
@@ -50,7 +50,7 @@ module.exports = {
         .setTitle("moshi moshi")
         .setDescription(":telephone:")
         .setColor(0xFA0000);
-        message.react(message.guild.emojis.get(csmiley['dqr']));
+        message.react(message.guild.emojis.get('dqr'));
         message.react(message.guild.emojis.get(csmiley['GrdMacacaorel']));
         message.channel.send({embed});
    	}
