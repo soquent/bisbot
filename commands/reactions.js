@@ -1,6 +1,7 @@
 //C'est ici pour les reactions rigolotes et mignonnes
 //suffit juste de copier/coller la commande et de l'adapter à ta sauce !
 const Discord = require('discord.js');
+const { personnes } = require('../config.json');
 
 module.exports = {
     name: 'reactions',
@@ -9,7 +10,7 @@ module.exports = {
 
       const msg = message.content.toLowerCase();
 
-      if(message.isMentioned(client.user)){
+      if(message.isMentioned(personnes['bisbot'])){
         message.channel.send('Coucou ${message.author} :blush: ')
       }
 
@@ -17,8 +18,9 @@ module.exports = {
 
         message.channel.send('quelle vie');
       }
-      if (msg.includes('nul')) {
-        message.channel.send(':(');
+      if (msg.includes('nul') && message.author.id === personnes['charlotte']) {
+        message.channel.send('Je suis désolé :(');
+        
     }
      if (msg.includes('zoe')) {
 
