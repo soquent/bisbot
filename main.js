@@ -31,7 +31,7 @@ client.on('message', message => {
 
 	const args = message.content.slice().split(/ +/);
 	const commandName = args.shift().toLowerCase();
-	message.channel.send(commandName);
+	message.channel.send(args);
 	const command = client.commands.get(commandName)
 		|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 
