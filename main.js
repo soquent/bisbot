@@ -25,7 +25,9 @@ client.once('ready', () => {
 });
 
 client.on('message', message => {
-	if (!message.content.startsWith(prefix) || message.author.bot) return;
+	if (message.author.bot) {return;}
+	message.channel.send("0");
+	if (!message.content.startsWith(prefix)) {client.commands.get('reactions').execute(message);}
 	message.channel.send("1");
 	const args = message.content.slice(prefix.length).split(/ +/);
 	const commandName = args.shift().toLowerCase();
