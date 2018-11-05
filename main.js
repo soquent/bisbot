@@ -16,6 +16,13 @@ const cooldowns = new Discord.Collection();
 
 client.once('ready', () => {
 	console.log('Ready!');
+	var chans = client.channels.array()
+	var nbChans = chans.length
+	for (var i=0;	i < nbChans; i++){
+		var c = chans[i]
+		if (c.id === '507693816531386379') {c.send("bip boup. Mise à jour réussie. Je suis opérationnel ! :trumpet:")
+	}
+}
 });
 
 client.on('message', message => {
