@@ -29,6 +29,9 @@ module.exports = {
       if (msg.includes('big hands')) {
         message.channel.send('miam')
       }
+        if (msg.includes('amel')) {
+        message.channel.send('je dors toute seule')
+      }
       if (msg.includes('good bot')) {
         message.react('😄');
         message.channel.send('hihi : ]');
