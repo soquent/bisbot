@@ -38,7 +38,7 @@ module.exports = {
 
           let url = 'https://example.com';
 
-node-fetch(url)
+fetch(url)
 .then(res => res.json())
 .then((out) => {
   console.log('Checkout this JSON! ', out);
