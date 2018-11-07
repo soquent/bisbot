@@ -33,6 +33,21 @@ module.exports = {
 
   	      const wiki = "http://fr.mogapedia.wikia.com/wiki/".concat(monstre)
   	      message.channel.send(wiki);
+          var params = getUrlVars('http://fr.mogapedia.wikia.com/wiki/Rathalos');
+          console.log(params);
+
+
+          function getUrlVars(url) {
+    var hash;
+    var myJson = {};
+    var hashes = url.slice(url.indexOf('?') + 1).split('&');
+    for (var i = 0; i < hashes.length; i++) {
+        hash = hashes[i].split('=');
+        myJson[hash[0]] = hash[1];
+    }
+    return myJson;
+}
+        message.channel.send(params)
         }
       }
 }

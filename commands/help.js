@@ -20,7 +20,7 @@ module.exports = {
 			if (message.author.tag === personnes['adele']) {titre = titre.concat("Adèle ?")}*/
 			const embed = new Discord.RichEmbed()
 		  .setTitle(titre)
-		  .setColor(0x00AE86)
+		  .setColor("RANDOM")
 		  .setDescription("Voici dont je suis capable pour l'instant :")
 
 		  .addField("MHGU :",
