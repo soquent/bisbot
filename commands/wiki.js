@@ -33,9 +33,6 @@ module.exports = {
 
   	      const wiki = "http://fr.mogapedia.wikia.com/wiki/".concat(monstre)
   	      message.channel.send(wiki);
-          var params = getUrlVars('http://fr.mogapedia.wikia.com/wiki/Rathalos');
-          console.log(params);
-
 
           function getUrlVars(url) {
     var hash;
@@ -47,7 +44,15 @@ module.exports = {
     }
     return myJson;
 }
-        message.channel.send(params)
+var params = getUrlVars('http://fr.mogapedia.wikia.com/wiki/Rathalos');
+var fileName = rath
+var file = require(fileName);
+
+fs.writeFile(fileName, JSON.stringify(file), function (err) {
+  if (err) return console.log(err);
+  console.log(JSON.stringify(file));
+  console.log('writing to ' + fileName);
+console.log(params);
         }
       }
 }
