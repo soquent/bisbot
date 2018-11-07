@@ -36,25 +36,14 @@ module.exports = {
   	      const wiki = "http://fr.mogapedia.wikia.com/wiki/".concat(monstre)
   	      message.channel.send(wiki);
 
-          function getUrlVars(url) {
-    var hash;
-    var myJson = {};
-    var hashes = url.slice(url.indexOf('?') + 1).split('&');
-    for (var i = 0; i < hashes.length; i++) {
-        hash = hashes[i].split('=');
-        myJson[hash[0]] = hash[1];
-    }
-    return myJson;
-}
-var params = getUrlVars('http://fr.mogapedia.wikia.com/wiki/Rathalos');
+          let url = 'https://example.com';
 
-fs.writeFile("test.json", "allo", function(err) {
-    if(err) {
-        return console.log(err);
-    }
-
-    console.log("The file was saved!");
-    message.channel.send("Le fichier a été sauvegardé.")});
+node-fetch(url)
+.then(res => res.json())
+.then((out) => {
+  console.log('Checkout this JSON! ', out);
+})
+.catch(err => { throw err });
         }
       }
 }
