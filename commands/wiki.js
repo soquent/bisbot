@@ -1,4 +1,4 @@
-const fetch = require('node-fetch')
+const fetch = require('node-fetch');
 
 const {monstres} = require('../config.json');
 module.exports = {
@@ -36,16 +36,9 @@ module.exports = {
   	      const wiki = "http://fr.mogapedia.wikia.com/wiki/".concat(monstre)
   	      message.channel.send(wiki);
 
-          let url = 'https://example.com';
-
-          fetch(url, { method: 'GET'})
-          .then((res) => {
-              console.log(res)
-              return res.json()
-          })
-          .then((json) => {
-              console.log(json)
+          fetch('https://api.github.com/users/github')
+    .then(res => res.json())
+    .then(json => console.log(json));
           })
         }
       }
-}
