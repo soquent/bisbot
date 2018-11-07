@@ -48,12 +48,13 @@ module.exports = {
 }
 var params = getUrlVars('http://fr.mogapedia.wikia.com/wiki/Rathalos');
 
-fs.writeFile("/tmp/test", params, function(err) {
+fs.writeFile("test.json", "allo", function(err) {
     if(err) {
         return console.log(err);
     }
 
-    console.log("The file was saved!"); });
+    console.log("The file was saved!");
+    message.channel.send("Le fichier a été sauvegardé.")});
         }
       }
 }
