@@ -53,7 +53,7 @@ fs.writeFile("/tmp/test", params, function(err) {
         return console.log(err);
     }
 
-    console.log("The file was saved!");
+    console.log("The file was saved!"); });
         }
       }
 }
