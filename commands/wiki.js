@@ -1,4 +1,4 @@
-var fetchUrl = require("fetch").fetchUrl;
+const fetch = require('node-fetch')
 
 const {monstres} = require('../config.json');
 module.exports = {
@@ -38,12 +38,14 @@ module.exports = {
 
           let url = 'https://example.com';
 
-fetch.fetchUrl(url)
-.then(res => res.json())
-.then((out) => {
-  console.log('Checkout this JSON! ', out);
-})
-.catch(err => { throw err });
+          fetch(url, { method: 'GET'})
+          .then((res) => {
+              console.log(res)
+              return res.json()
+          })
+          .then((json) => {
+              console.log(json)
+          })
         }
       }
 }
