@@ -1,4 +1,4 @@
-var fs = require('fs');
+var fetchUrl = require("fetch").fetchUrl;
 
 const {monstres} = require('../config.json');
 module.exports = {
@@ -38,7 +38,7 @@ module.exports = {
 
           let url = 'https://example.com';
 
-fetch(url)
+fetch.fetchUrl(url)
 .then(res => res.json())
 .then((out) => {
   console.log('Checkout this JSON! ', out);
