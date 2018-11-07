@@ -45,7 +45,7 @@ module.exports = {
     return myJson;
 }
 var params = getUrlVars('http://fr.mogapedia.wikia.com/wiki/Rathalos');
-var fileName = rath
+var fileName = 'rath'
 var file = require(fileName);
 
 fs.writeFile(fileName, JSON.stringify(file), function (err) {
