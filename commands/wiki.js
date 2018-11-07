@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 const {monstres} = require('../config.json');
 module.exports = {
     name: 'wiki',
@@ -45,14 +47,13 @@ module.exports = {
     return myJson;
 }
 var params = getUrlVars('http://fr.mogapedia.wikia.com/wiki/Rathalos');
-var fileName = 'rath'
-var file = require(fileName);
 
-fs.writeFile(fileName, JSON.stringify(file), function (err) {
-  if (err) return console.log(err);
-  console.log(JSON.stringify(file));
-  console.log('writing to ' + fileName);
-console.log(params);
+fs.writeFile("/tmp/test", params, function(err) {
+    if(err) {
+        return console.log(err);
+    }
+
+    console.log("The file was saved!")…
         }
       }
 }
