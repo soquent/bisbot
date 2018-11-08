@@ -40,25 +40,19 @@ module.exports = {
             const elements = ['Feu','Glace','Dragon','Foudre','Eau']
             const deb = doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Faible contre</h3>');
             const fin =  doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Habitat(s)</h3>');
-            var sortie = ""
+            var sortie = "le ".substring(args).substring('est faible à : ')
             const doc2 = doc.substring(deb,fin);
             for (var i=0; i < elements.length; i++){
 
               if (doc2.includes(elements[i])){
-                sortie = sortie.concat(elements[i]+", ")
+                sortie = sortie.concat(elements[i]+"\n")
                 }
               }
             return (sortie)
             }
           fetch(wiki)
               .then(res => res.text())
-              //.then(body => console.log(body));
-
-
               .then(body => message.channel.send(wik(body)))
-              message.channel.send(wiki);
-
-              //const myRequest = new Request(wiki);
 
 
 
