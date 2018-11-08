@@ -51,7 +51,7 @@ module.exports = {
                 }
               }
               const embed = new Discord.RichEmbed()
-              .setTitle("Monstre : ".concat(args.split(",").join(" ")))
+              .setTitle("Monstre : ".concat(args))
               .setDescription(wiki)
               .addField("Faiblesses : ", sortie, true)
               .setImage('https://vignette.wikia.nocookie.net/mogapedia/images/1/16/Status_Effect-Waterblight_MH4_Icon.png/revision/latest/scale-to-width-down/20?cb=20140625220940&path-prefix=fr');
