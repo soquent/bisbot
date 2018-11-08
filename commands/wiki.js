@@ -34,16 +34,16 @@ module.exports = {
   		  }
 
   	      const wiki = "http://fr.mogapedia.wikia.com/wiki/".concat(monstre)
-  	      message.channel.send(wiki);
+
           var content;
           fetch(wiki)
               .then(res => res.text())
               //.then(body => console.log(body));
 
 
-              .then(body => content = body.text)
-
-              const elements = ['Feu','Glace','Dragon','Foudre','Eau']
+              .then(body => message.channel.send(body.substring(1,100)))
+              message.channel.send(wiki);
+              /*const elements = ['Feu','Glace','Dragon','Foudre','Eau']
               const deb = content.indexOf('<h3 class="pi-data-label pi-secondary-font">Faible contre</h3>');
               const fin =  content.indexOf('<h3 class="pi-data-label pi-secondary-font">Habitat(s)</h3>');
               const sortie = ""
@@ -54,7 +54,7 @@ module.exports = {
                   sortie = sortie.concat(elements[i]+", ")
                 }
                 }
-                message.channel.send(sortie)
+                message.channel.send(sortie)*/
 
           }
         }
