@@ -36,7 +36,7 @@ module.exports = {
   	      const wiki = "http://fr.mogapedia.wikia.com/wiki/".concat(monstre)
   	      message.channel.send(wiki);
 
-          fetch('https://api.github.com/users/github')
+          fetch(wiki)
     .then(res => res.json())
     .then(json => console.log(json));
           }
