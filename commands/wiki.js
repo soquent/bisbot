@@ -37,8 +37,9 @@ module.exports = {
   	      message.channel.send(wiki);
 
           fetch(wiki)
-    .then(res => res.json())
-    .then(json => console.log(json));
+              .then(res => res.text())
+              .then(body => console.log(body));
+              .then(body => message.channel.send(body))
           }
         }
       }
