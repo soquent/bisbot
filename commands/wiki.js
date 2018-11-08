@@ -42,7 +42,7 @@ module.exports = {
             const fin =  doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Habitat(s)</h3>');
             message.channel.send(args);
             message.channel.send(args[0]);
-            var sortie = "le ".substring(args).substring('est faible à : ')
+            var sortie = "le ".concat(args).concat('est faible à : ')
             const doc2 = doc.substring(deb,fin);
             for (var i=0; i < elements.length; i++){
 
