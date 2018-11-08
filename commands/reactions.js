@@ -38,7 +38,7 @@ module.exports = {
         //message.channel.send(`${'http://icons.iconarchive.com/icons/svengraph/daft-punk/512/Daft-Punk-Guyman-Smile-icon.png'}`);
       }
       if (msg.includes('bonne nuit')) {
-        message.channel.send('fait de beaux rêves ${message.author} !! :sleeping:');
+        message.channel.send(`fait de beaux rêves ${message.author} !! :sleeping:`);
       }
 
 
