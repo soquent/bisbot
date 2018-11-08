@@ -41,7 +41,7 @@ module.exports = {
               //.then(body => console.log(body));
 
 
-              .then(body => content = body.toString())
+              .then(body => content = body.text)
 
               const elements = ['Feu','Glace','Dragon','Foudre','Eau']
               const deb = content.indexOf('<h3 class="pi-data-label pi-secondary-font">Faible contre</h3>');
