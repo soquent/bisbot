@@ -49,7 +49,7 @@ module.exports = {
               content = content.substring(i,j);
               for (var i=0; i < elements.length; i++){
 
-                if content.includes(elements[i]){
+                if (content.includes(elements[i])){
                   sortie = sortie.concat(elements[i]+", ")
                 }
                 }
