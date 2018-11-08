@@ -8,6 +8,7 @@ module.exports = {
       function capitalize(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
         }
+
       const msg = message.content.toLowerCase();
 
   		  if (args[0].includes( 'talent' )|| args[0].includes('skill'))
@@ -16,7 +17,6 @@ module.exports = {
   		  else if (args[0] === 'list'){message.channel.send(monstres.split(", ").sort().join(", "));}
 
         else{
-
 
   		      var monstre = capitalize(args[0])
   		        for (var i = 1; i < args.length; i++) {
@@ -40,6 +40,8 @@ module.exports = {
             const elements = ['Feu','Glace','Dragon','Foudre','Eau']
             const deb = doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Faible contre</h3>');
             const fin =  doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Habitat(s)</h3>');
+            message.channel.send(args);
+            message.channel.send(args[0]);
             var sortie = "le ".substring(args).substring('est faible à : ')
             const doc2 = doc.substring(deb,fin);
             for (var i=0; i < elements.length; i++){
