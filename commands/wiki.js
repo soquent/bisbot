@@ -36,15 +36,16 @@ module.exports = {
   	      const wiki = "http://fr.mogapedia.wikia.com/wiki/".concat(monstre)
 
           function wik(doc){
+
             const elements = ['Feu','Glace','Dragon','Foudre','Eau']
             const deb = doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Faible contre</h3>');
             const fin =  doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Habitat(s)</h3>');
-            const sortie = ""
-            doc = doc.substring(deb,fin);
+            var sortie = ""
+            const doc2 = doc.substring(deb,fin);
             for (var i=0; i < elements.length; i++){
 
-              if (doc.includes(elements[i])){
-                sortie = doc.concat(elements[i]+", ")
+              if (doc2.includes(elements[i])){
+                sortie = sortie.concat(elements[i]+", ")
                 }
               }
             return (sortie)
