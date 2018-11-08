@@ -43,10 +43,10 @@ module.exports = {
 
               .then(body => content = body)
               const elements = ['Feu','Glace','Dragon','Foudre','Eau']
-              const i = content.indexOf('<h3 class="pi-data-label pi-secondary-font">Faible contre</h3>');
-              const j =  content.indexOf('<h3 class="pi-data-label pi-secondary-font">Habitat(s)</h3>');
+              const deb = content.indexOf('<h3 class="pi-data-label pi-secondary-font">Faible contre</h3>');
+              const fin =  content.indexOf('<h3 class="pi-data-label pi-secondary-font">Habitat(s)</h3>');
               const sortie = ""
-              content = content.substring(i,j);
+              content = content.substring(deb,fin);
               for (var i=0; i < elements.length; i++){
 
                 if (content.includes(elements[i])){
