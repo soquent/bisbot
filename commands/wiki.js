@@ -51,7 +51,8 @@ module.exports = {
                 }
               }
               const embed = new Discord.RichEmbed()
-              .setTitle("Monstre :".concat(args))
+              .setTitle("Monstre : ".concat(args))
+              .setDescription(" ")
               .addField("Faiblesses", sortie, true)
               .setColor("RANDOM");
               /*const dqr = message.guild.emojis.find(emoji => emoji.name === "dqr");
