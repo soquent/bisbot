@@ -54,7 +54,8 @@ module.exports = {
               .setTitle("Monstre : ".concat(args.split(",").join(" ")))
               .setDescription(wiki)
               .addField("Faiblesses : ", sortie, true)
-              .setColor("RANDOM"); 
+              .setImage('https://vignette.wikia.nocookie.net/mogapedia/images/1/16/Status_Effect-Waterblight_MH4_Icon.png/revision/latest/scale-to-width-down/20?cb=20140625220940&path-prefix=fr');
+              .setColor("RANDOM");
               /*const dqr = message.guild.emojis.find(emoji => emoji.name === "dqr");
               const GrdMacacaorel = message.guild.emojis.find(emoji => emoji.name === "GrdMacacaorel");
               message.react(dqr.id);
