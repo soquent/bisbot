@@ -51,7 +51,7 @@ module.exports = {
                 }
               }
               const embed = new Discord.RichEmbed()
-              .setTitle("Monstre : ".concat(args))
+              .setTitle("Monstre : ".concat(args.split(",").join(" ")))
               .setDescription(wiki)
               .addField("Faiblesses", sortie, true)
               .setColor("RANDOM");
