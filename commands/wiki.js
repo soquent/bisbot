@@ -53,8 +53,8 @@ module.exports = {
               const embed = new Discord.RichEmbed()
               .setTitle("Monstre : ".concat(args.split(",").join(" ")))
               .setDescription(wiki)
-              .addField("Faiblesses", sortie, true)
-              .setColor("RANDOM");
+              .addField("Faiblesses : ", sortie, true)
+              .setColor("RANDOM"); 
               /*const dqr = message.guild.emojis.find(emoji => emoji.name === "dqr");
               const GrdMacacaorel = message.guild.emojis.find(emoji => emoji.name === "GrdMacacaorel");
               message.react(dqr.id);
