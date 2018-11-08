@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+const Discord = require('discord.js');
 
 const {monstres} = require('../config.json');
 module.exports = {
@@ -40,9 +41,8 @@ module.exports = {
             const elements = ['Feu','Glace','Dragon','Foudre','Eau']
             const deb = doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Faible contre</h3>');
             const fin =  doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Habitat(s)</h3>');
-            message.channel.send(args);
-            message.channel.send(args[0]);
-            var sortie = "le ".concat(args).concat('est faible à : ')
+
+            var sortie = ""
             const doc2 = doc.substring(deb,fin);
             for (var i=0; i < elements.length; i++){
 
@@ -50,7 +50,16 @@ module.exports = {
                 sortie = sortie.concat(elements[i]+"\n")
                 }
               }
-            return (sortie)
+              const embed = new Discord.RichEmbed()
+              .setTitle("Monstre :".concat(args))
+              .addField("Faiblesses", sortie, true)
+              .setColor("RANDOM");
+              /*const dqr = message.guild.emojis.find(emoji => emoji.name === "dqr");
+              const GrdMacacaorel = message.guild.emojis.find(emoji => emoji.name === "GrdMacacaorel");
+              message.react(dqr.id);
+              message.react(GrdMacacaorel.id);
+              message.channel.send({embed});*/
+            return (embed)
             }
           fetch(wiki)
               .then(res => res.text())
