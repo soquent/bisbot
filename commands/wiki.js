@@ -39,7 +39,7 @@ module.exports = {
           fetch(wiki)
               .then(res => res.text())
               .then(body => console.log(body));
-              .then(body => message.channel.send(body))
+              //.then(body => message.channel.send(body))
           }
         }
       }
