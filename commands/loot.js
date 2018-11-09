@@ -53,7 +53,7 @@ module.exports = {
                 var bout = tab[k]
                 var titre = "**"
                 var pointeur = 4
-                var lettre = pointeur.charAt(pointeur);
+                var lettre = bout.charAt(pointeur);
                 while (lettre in alphabet){
                   titre.concat(lettre);
                   pointeur++;
