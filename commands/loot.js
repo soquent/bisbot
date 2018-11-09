@@ -39,7 +39,7 @@ module.exports = {
   			                 }
   		  }
 
-  	      const wiki = "https://mhworld.kiranico.com/monster".concat(monstre)
+  	      const wiki = "https://mhworld.kiranico.com/monster/".concat(monstre)
           message.channel.send(wiki)
           /*function wik(doc){
 
