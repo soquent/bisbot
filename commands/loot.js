@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'weak',
+    name: 'loot',
     description: 'i give one monster weaknesses',
     execute(message, args) {
       function capitalize(string) {
@@ -65,7 +65,7 @@ module.exports = {
               const deb3 = doc_thumb.indexOf('data-src=')+10;
               const fin3 = doc_thumb.indexOf('  	 width=')-1;
               doc_thumb = doc_thumb.substring(deb2,fin2);
-
+              message.channel.send(doc_thumb)
                 if (doc2 === "") {return "This meownster doesn't even exists !";}
                 const embed = new Discord.RichEmbed()
                 .setTitle("Monster : ".concat(prettyname))
