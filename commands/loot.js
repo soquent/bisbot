@@ -71,7 +71,7 @@ module.exports = {
               .setTitle("Monster : ".concat(prettyname))
               .setDescription(wiki)
               .setThumbnail(doc_thumb)
-              .addField("Weaknesse(s) : ", doc2, true)
+              .addField("Weaknesse(s) : ", sortie, true)
 
               .setColor("RANDOM")
 
