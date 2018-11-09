@@ -60,7 +60,7 @@ module.exports = {
 
                 }
                 titre.concat('**\n')
-                sortie.append(titre)
+                sortie.concat(titre)
               }
             }
             message.channel.send(sortie)
