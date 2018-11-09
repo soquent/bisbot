@@ -58,7 +58,7 @@ module.exports = {
               var doc_thumb = doc.substring(deb2,fin2);
               const deb3 = doc_thumb.indexOf('data-src=')+10;
               const fin3 = doc_thumb.indexOf('  	 width=')-1;
-
+              message.channel.send(doc_thumb)
               doc_thumb= doc_thumb.substring(deb3,fin3);
               const embed = new Discord.RichEmbed()
               .setTitle("Monstre : ".concat(args))
