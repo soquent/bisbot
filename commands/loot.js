@@ -1,13 +1,12 @@
 const fetch = require('node-fetch');
 const Discord = require('discord.js');
+const alphabet = "azertyuiopqsdfghjklmwxcvbn +%1234567890"
+const
 
 module.exports = {
     name: 'loot',
-    description: 'i give one monster weaknesses',
+    description: 'i give loot',
     execute(message, args) {
-      function capitalize(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-        }
 
       const msg = message.content.toLowerCase();
 
@@ -22,14 +21,14 @@ module.exports = {
   		      var prettyname = capitalize(args[0])
   		        for (var i = 1; i < args.length; i++) {
                   prettyname = prettyname.concat(" ");
-  			           monstre = monstre.concat("_");
+  			           monstre = monstre.concat("-");
   			              if (args[i].includes("-")) {
   				                    const [a,b] = args[i].split("-");
-  				                    monstre = monstre.concat(capitalize(a));
+  				                    monstre = monstre.concat(a);
   				                    prettyname = prettyname.concat(capitalize(a));
   				                    monstre = monstre.concat("-");
   				                    prettyname = prettyname.concat("-");
-  				                    monstre = monstre.concat(capitalize(b));
+  				                    monstre = monstre.concat(b);
   				                    prettyname = prettyname.concat(capitalize(b));
   			                       }
   			           else{
@@ -38,24 +37,16 @@ module.exports = {
   			                 }
   		  }
 
-  	      const wiki = "https://monsterhunter.fandom.com/wiki/".concat(monstre)
-
+  	      const wiki = "https://mhworld.kiranico.com/monster".concat(monstre)
+          message.channel.send(wiki)
           function wik(doc){
 
+            const deb = doc.indexOf('<h5>High Rank</h5>');
+            const fin =  doc.indexOf('<h4 class="card-header">Barroth weapons and armor</h4>');
 
-            const elements = ['Fire','Ice','Dragon','Thunder','Water']
-            const deb = doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Weakest to:</h3>');
-            const fin =  doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Habitats:</h3>');
+            var sortie = ""
+            for(var j=0, )
 
-            var sortie = "" //contains all elements the monster is weak to
-            const doc2 = doc.substring(deb,fin);
-            for (var i=0; i < elements.length; i++){
-
-              if (doc2.includes(elements[i])){
-                sortie = sortie.concat(elements[i]+"\n")
-                }
-              }
-              
               if (sortie === "") {return "This meownster doesn't even exists !";}
               if (Math.random() >.999) {sortie = sortie.concat("Also, this monster seems weak to Death :3")}
 
