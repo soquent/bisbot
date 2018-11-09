@@ -46,16 +46,16 @@ module.exports = {
             const deb = doc.indexOf('<td colspan="2" style="background-color:#3A5766; color:#ffffff; font-weight:bold; font-size:9pt; text-align:center;"><b>Monster Hunter Generations</b>');
             const fin =  doc.indexOf('<b>Threat Level');
 
-            var sortie = ""
             var doc2 = doc.substring(deb,fin);
             const deb2 = doc2.indexOf('data-src=')
             const fin2 = doc2.indexOf('  	 width=')
             doc2 = doc2.substring(deb2,fin2)
-              if (sortie === "") {return "This meownster doesn't even exists !";}
+
+              if (doc2 === "") {return "This meownster doesn't even exists !";}
               const embed = new Discord.RichEmbed()
               .setTitle("Monster : ".concat(prettyname))
               .setDescription(wiki)
-              .addField("Weaknesse(s) : ", sortie, true)
+              .addField("Weaknesse(s) : ", doc2, true)
               .setColor("RANDOM")
 
             return ({embed})
