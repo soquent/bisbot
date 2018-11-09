@@ -47,15 +47,17 @@ module.exports = {
             const fin =  doc.indexOf('<b>Threat Level');
 
             var doc2 = doc.substring(deb,fin);
-            const deb2 = doc2.indexOf('data-src=')
-            const fin2 = doc2.indexOf('  	 width=')
-            doc2 = doc2.substring(deb2,fin2)
+            const deb2 = doc2.indexOf('data-src=')+10;
+            const fin2 = doc2.indexOf('  	 width=')-1;
+            doc2 = doc2.substring(deb2,fin2);
 
               if (doc2 === "") {return "This meownster doesn't even exists !";}
               const embed = new Discord.RichEmbed()
               .setTitle("Monster : ".concat(prettyname))
               .setDescription(wiki)
+              .setThumbnail(doc2)
               .addField("Weaknesse(s) : ", doc2, true)
+
               .setColor("RANDOM")
 
             return ({embed})
