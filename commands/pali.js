@@ -73,7 +73,7 @@ module.exports = {
               .addField("Weaknesse(s) : ", sortie, true)
               .setColor("RANDOM")
               if (doc_thumb.includes(".png")){embed.setThumbnail(doc_thumb);}
-              else {return;}
+              else {return {embed};}
 
 
             return ({embed})
