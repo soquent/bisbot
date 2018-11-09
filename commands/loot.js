@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const Discord = require('discord.js');
 const alphabet = "azertyuiopqsdfghjklmwxcvbn +%1234567890"
-const
+//const
 
 module.exports = {
     name: 'loot',
