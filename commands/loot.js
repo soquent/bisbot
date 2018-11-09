@@ -7,7 +7,9 @@ module.exports = {
     name: 'loot',
     description: 'i give loot',
     execute(message, args) {
-
+      function capitalize(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+        }
       const msg = message.content.toLowerCase();
 
   		  /*if (args[0].includes( 'talent' )|| args[0].includes('skill'))
@@ -17,7 +19,7 @@ module.exports = {
 
 
 
-  		      var monstre = capitalize(args[0])
+  		      var monstre = args[0]
   		      var prettyname = capitalize(args[0])
   		        for (var i = 1; i < args.length; i++) {
                   prettyname = prettyname.concat(" ");
@@ -66,7 +68,7 @@ module.exports = {
               .setColor("RANDOM")
 
             return ({embed})*/
-            
+
         console.log(prettyname)
           fetch(wiki)
               .then(res => res.text())
