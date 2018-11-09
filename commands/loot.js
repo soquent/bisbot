@@ -41,26 +41,25 @@ module.exports = {
 
   	      const wiki = "https://mhworld.kiranico.com/monster/".concat(monstre)
           message.channel.send(wiki)
-          /*function wik(doc){
+          function wik(doc){
 
             const deb = doc.indexOf('<h5>High Rank</h5>');
             const fin =  doc.indexOf('<h4 class="card-header">Barroth weapons and armor</h4>');
-
+            const corps = doc.substring(deb,fin)
             var sortie = ""
-            for(var j=0, )
+            for(var j=0; j<corps.length;j++ ){
+              const tab = corps.split('<td rowspan=')
+              for (var k = 0;k<tab.length;k++){
+                var bout = tab[k]
+                message.channel.send(bout);
 
-              if (sortie === "") {return "This meownster doesn't even exists !";}
-              if (Math.random() >.999) {sortie = sortie.concat("Also, this monster seems weak to Death :3")}
+              }
+            }
+
+            //  if (sortie === "") {return "This meownster doesn't even exists !";}
 
 
-              const deb2 = doc.indexOf('<td colspan="2" style="background-color:#3A5766; color:#ffffff; font-weight:bold; font-size:9pt; text-align:center;"><b>Monster Hunter Generations</b>');
-              const fin2 =  doc.indexOf('<b>Threat Level');
-              var doc_thumb = doc.substring(deb2,fin2); //contains the thumbnail
-              const deb3 = doc_thumb.indexOf('data-src=')+10;
-              const fin3 = doc_thumb.indexOf('  	 width=')-1;
-              doc_thumb = doc_thumb.substring(deb3,fin3);
-
-                const embed = new Discord.RichEmbed()
+                /*const embed = new Discord.RichEmbed()
                 .setTitle("Monster : ".concat(prettyname))
                 .setDescription(wiki)
                 .setThumbnail(doc_thumb)
@@ -68,7 +67,7 @@ module.exports = {
               .setColor("RANDOM")
 
             return ({embed})*/
-
+          }
         console.log(prettyname)
           fetch(wiki)
               .then(res => res.text())
