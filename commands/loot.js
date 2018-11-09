@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const Discord = require('discord.js');
 
 module.exports = {
-    name: 'weak',
+    name: 'loot',
     description: 'i give one monster weaknesses',
     execute(message, args) {
       function capitalize(string) {
@@ -47,16 +47,17 @@ module.exports = {
             const fin =  doc.indexOf('<b>Threat Level');
 
             var sortie = ""
-            const doc2 = doc.substring(deb,fin);
+            var doc2 = doc.substring(deb,fin);
             const deb2 = doc2.indexOf('data-src=')
             const fin2 = doc2.indexOf('  	 width=')
+            doc2 = doc2.substring(deb2,fin2)
               if (sortie === "") {return "This meownster doesn't even exists !";}
               const embed = new Discord.RichEmbed()
               .setTitle("Monster : ".concat(prettyname))
               .setDescription(wiki)
               .addField("Weaknesse(s) : ", sortie, true)
               .setColor("RANDOM")
-             
+
             return ({embed})
             }
         console.log(prettyname)
