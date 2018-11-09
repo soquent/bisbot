@@ -59,6 +59,8 @@ module.exports = {
                   pointeur++;
 
                 }
+                message.channel.send(titre)
+                message.channel.send('1')
                 titre.concat('**\n')
                 sortie.concat(titre)
               }
