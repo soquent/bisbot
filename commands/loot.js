@@ -48,13 +48,16 @@ module.exports = {
             const corps = doc.substring(deb,fin)
             var sortie = ""
             for(var j=0; j<corps.length;j++ ){
+              message.channel.send('2')
               const tab = corps.split('<td rowspan=')
               for (var k = 0;k<tab.length;k++){
+                message.channel.send('3')
                 var bout = tab[k]
                 var titre = "**"
                 var pointeur = 4
                 var lettre = bout.charAt(pointeur);
                 while (alphabet.includes(lettre)){
+                  message.channel.send('5')
                   titre.concat(lettre);
                   pointeur++;
 
