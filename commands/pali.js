@@ -83,11 +83,12 @@ module.exports = {
               doc_thumb = doc_thumb.substring(deb3,fin3);
 
                 var embed = new Discord.RichEmbed()
+              .setColor("RANDOM")
               .setTitle("Monster : ".concat(prettyname))
               .setDescription(wiki)
               .addField("Weaknesse(s) : ", weaknesses, true)
-              .addField("Ailment(s) : ",ail, true );
-              .setColor("RANDOM")
+              .addField("Ailment(s) : ",ail, true )
+
 
               if (doc_thumb.includes(".png")){embed.setThumbnail(doc_thumb);}
               else {return {embed};}
