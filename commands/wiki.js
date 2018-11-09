@@ -56,8 +56,9 @@ module.exports = {
               const fin2 =  doc.indexOf('<b>Threat Level');
 
               var doc_thumb = doc.substring(deb2,fin2);
-              const deb3 = doc2.indexOf('data-src=')+10;
-              const fin3 = doc2.indexOf('  	 width=')-1;
+              const deb3 = doc_thumb.indexOf('data-src=')+10;
+              const fin3 = doc_thumb.indexOf('  	 width=')-1;
+
               doc_thumb= doc_thumb.substring(deb3,fin3);
               const embed = new Discord.RichEmbed()
               .setTitle("Monstre : ".concat(args))
