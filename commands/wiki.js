@@ -55,11 +55,12 @@ module.exports = {
               const deb2 = doc.indexOf('<td colspan="2" style="background-color:#3A5766; color:#ffffff; font-weight:bold; font-size:9pt; text-align:center;"><b>Monster Hunter Generations</b>');
               const fin2 =  doc.indexOf('<b>Threat Level');
 
-              var doc_thumb = doc.substring(deb2,fin2);
+              var doc_thumb = doc.substring(deb,fin);
               const deb3 = doc_thumb.indexOf('data-src=')+10;
               const fin3 = doc_thumb.indexOf('  	 width=')-1;
+              doc_thumb = doc_thumb.substring(deb3,fin3);
+              message.channel.send('hein')
               message.channel.send(doc_thumb)
-              doc_thumb= doc_thumb.substring(deb3,fin3);
               const embed = new Discord.RichEmbed()
               .setTitle("Monstre : ".concat(args))
               .setDescription(wiki)
