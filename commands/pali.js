@@ -61,15 +61,7 @@ module.exports = {
 
 
 
-              const alpha= doc.indexOf('<td colspan="2" style="background-color:#3A5766; color:#ffffff; font-weight:bold; font-size:9pt; text-align:center;"><b>Monster Hunter Generations</b>');
-              const beta = doc.indexOf('<td colspan="2" style="background-color:#3A5766; color:#ffffff; font-weight:bold; font-size:9pt; text-align:center;"><b>Monster Hunter 3</b>');
-              var deb2 = ""
-              if (doc.includes(alpha)){
-                deb2 = alpha;
-              }
-              else {
-                deb2 = beta;
-              }
+              const deb2= doc.indexOf('<td colspan="2" style="background-color:#3A5766; color:#ffffff; font-weight:bold; font-size:9pt; text-align:center;"><b>Monster Hunter');
               const fin2 =  doc.indexOf('<b>Threat Level');
               var doc_thumb = doc.substring(deb2,fin2); //contains the thumbnail
               const deb3 = doc_thumb.indexOf('data-src=')+10;
