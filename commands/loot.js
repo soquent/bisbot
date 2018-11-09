@@ -64,9 +64,8 @@ module.exports = {
               var doc_thumb = doc.substring(deb2,fin2);
               const deb3 = doc_thumb.indexOf('data-src=')+10;
               const fin3 = doc_thumb.indexOf('  	 width=')-1;
-              doc_thumb = doc_thumb.substring(deb2,fin2);
+              doc_thumb = doc_thumb.substring(deb3,fin3);
               message.channel.send(doc_thumb)
-                if (doc2 === "") {return "This meownster doesn't even exists !";}
                 const embed = new Discord.RichEmbed()
                 .setTitle("Monster : ".concat(prettyname))
                 .setDescription(wiki)
