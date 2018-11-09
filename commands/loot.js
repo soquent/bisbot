@@ -54,7 +54,7 @@ module.exports = {
                 var titre = "**"
                 var pointeur = 4
                 var lettre = bout.charAt(pointeur);
-                while (lettre in alphabet){
+                while (alphabet.includes(lettre)){
                   titre.concat(lettre);
                   pointeur++;
 
