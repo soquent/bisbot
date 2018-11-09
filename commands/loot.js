@@ -59,7 +59,7 @@ module.exports = {
                   pointeur++;
 
                 }
-                titre.concat('**')
+                titre.concat('**\n')
                 sortie.append(titre)
               }
             }
