@@ -51,11 +51,19 @@ module.exports = {
               const tab = corps.split('<td rowspan=')
               for (var k = 0;k<tab.length;k++){
                 var bout = tab[k]
-                message.channel.send(bout);
+                var titre = "**"
+                var pointeur = 4
+                var lettre = pointeur.charAt(pointeur);
+                while (lettre in alphabet){
+                  titre.concat(lettre);
+                  pointeur++;
 
+                }
+                titre.concat('**')
+                sortie.append(titre)
               }
             }
-
+            return sortie
             //  if (sortie === "") {return "This meownster doesn't even exists !";}
 
 
