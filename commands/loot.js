@@ -47,8 +47,8 @@ module.exports = {
             const fin =  doc.indexOf('<b>Threat Level');
 
             var doc2 = doc.substring(deb,fin);
-            const deb2 = doc2.indexOf('data-src=')+9;
-            const fin2 = doc2.indexOf('  	 width=');
+            const deb2 = doc2.indexOf('data-src=')+10;
+            const fin2 = doc2.indexOf('  	 width=')-1;
             doc2 = doc2.substring(deb2,fin2);
 
               if (doc2 === "") {return "This meownster doesn't even exists !";}
