@@ -48,10 +48,10 @@ module.exports = {
             const corps = doc.substring(deb,fin)
             var sortie = ""
             for(var j=0; j<corps.length;j++ ){
-              message.channel.send('2')
+
               const tab = corps.split('<td rowspan=')
               for (var k = 0;k<tab.length;k++){
-                message.channel.send('3')
+                console.log('3')
                 var bout = tab[k]
                 var titre = "";
                 var pointeur = 4;
@@ -61,13 +61,13 @@ module.exports = {
                   pointeur++;
 
                 }
-                message.channel.send(titre)
-                message.channel.send('1')
+                console.log(titre)
+                console.log('1')
                 titre.concat('\n')
                 sortie.concat(titre)
               }
             }
-            message.channel.send(sortie)
+            console.log(sortie)
             return sortie
             //  if (sortie === "") {return "This meownster doesn't even exists !";}
 
