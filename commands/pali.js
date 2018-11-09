@@ -63,7 +63,7 @@ module.exports = {
 
               const alpha= doc.indexOf('<td colspan="2" style="background-color:#3A5766; color:#ffffff; font-weight:bold; font-size:9pt; text-align:center;"><b>Monster Hunter Generations</b>');
               const beta = doc.indexOf('<td colspan="2" style="background-color:#3A5766; color:#ffffff; font-weight:bold; font-size:9pt; text-align:center;"><b>Monster Hunter 3</b>');
-              if doc.includes(alpha){
+              if (doc.includes(alpha)){
                 const deb2 = alpha;
               }
               else {
