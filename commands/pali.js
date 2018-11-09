@@ -64,7 +64,7 @@ module.exports = {
             var ail= "";
             for (var i=0; i<ailments.length;i++){
               if (doc.includes(ailments[i])){
-                ail = ail.concat(ailments[i]).concat(''\n');
+                ail = ail.concat(ailments[i]).concat('\n');
               }
             }
 
