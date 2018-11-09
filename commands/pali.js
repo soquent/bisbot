@@ -72,7 +72,7 @@ module.exports = {
                 .setDescription(wiki)
               .addField("Weaknesse(s) : ", sortie, true)
               .setColor("RANDOM")
-              if (doc_thumb.contains(".png")){embed.setThumbnail(doc_thumb);}
+              if (doc_thumb.includes(".png")){embed.setThumbnail(doc_thumb);}
               else {return;}
 
 
