@@ -42,6 +42,7 @@ module.exports = {
             const deb = doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Faible contre</h3>');
             const fin =  doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Habitat(s)</h3>');
 
+
             var sortie = ""
             const doc2 = doc.substring(deb,fin);
             for (var i=0; i < elements.length; i++){
@@ -50,9 +51,18 @@ module.exports = {
                 sortie = sortie.concat(elements[i]+"\n")
                 }
               }
+
+              const deb2 = doc.indexOf('<td colspan="2" style="background-color:#3A5766; color:#ffffff; font-weight:bold; font-size:9pt; text-align:center;"><b>Monster Hunter Generations</b>');
+              const fin2 =  doc.indexOf('<b>Threat Level');
+
+              var doc_thumb = doc.substring(deb2,fin2);
+              const deb3 = doc2.indexOf('data-src=')+10;
+              const fin3 = doc2.indexOf('  	 width=')-1;
+              doc_thumb= doc_thumb.substring(deb3,fin3);
               const embed = new Discord.RichEmbed()
               .setTitle("Monstre : ".concat(args))
               .setDescription(wiki)
+              .setThumbnail(doc_thumb)
               .addField("Faiblesses : ", sortie, true)
               .setImage('https://vignette.wikia.nocookie.net/mogapedia/images/1/16/Status_Effect-Waterblight_MH4_Icon.png/revision/latest/scale-to-width-down/20?cb=20140625220940&path-prefix=fr');
               //.setColor("RANDOM");
