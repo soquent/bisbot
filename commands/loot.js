@@ -63,6 +63,7 @@ module.exports = {
                 sortie.append(titre)
               }
             }
+            message.channel.send(sortie)
             return sortie
             //  if (sortie === "") {return "This meownster doesn't even exists !";}
 
