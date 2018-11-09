@@ -39,7 +39,7 @@ module.exports = {
 
   	      const wiki = "https://mhworld.kiranico.com/monster".concat(monstre)
           message.channel.send(wiki)
-          function wik(doc){
+          /*function wik(doc){
 
             const deb = doc.indexOf('<h5>High Rank</h5>');
             const fin =  doc.indexOf('<h4 class="card-header">Barroth weapons and armor</h4>');
@@ -65,8 +65,8 @@ module.exports = {
               .addField("Weaknesse(s) : ", sortie, true)
               .setColor("RANDOM")
 
-            return ({embed})
-            }
+            return ({embed})*/
+            
         console.log(prettyname)
           fetch(wiki)
               .then(res => res.text())
