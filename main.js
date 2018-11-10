@@ -20,7 +20,7 @@ client.once('ready', () => {
 	const edbisbot = client.channels.find(channel => channel.name === "élevage-du-bisbot");
 	edbisbot.send("bip boup. Mise à jour réussie. Je suis opérationnel ! :trumpet:");
 	console.log(client.guilds.size.toString())
-	client.user.setActivity('YouTube', { type: 'WATCHING' })
+	"505055128705957889".setActivity(`Type weak <monster> to get started ! \n${client.guilds.size.toString()} hunting `, { type: 'WATCHING' })
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
   .catch(console.error);
 });
