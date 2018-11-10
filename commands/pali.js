@@ -21,8 +21,8 @@ module.exports = {
 
 
 
-  		      var monstre = capitalize(args[0])
-  		      var prettyname = capitalize(args[0])
+  		      var monstre = ""
+  		      var prettyname = ""
   		        for (var i = 0; i < args.length; i++) {
                 if (i != 0) {
                   prettyname = prettyname.concat(" ");
