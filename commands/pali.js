@@ -62,8 +62,8 @@ module.exports = {
               if (Math.random() >.999) {weaknesses = weaknesses.concat("Also, this monster seems weak to Death :3")}
 
             var ail= "";
-            const debail = doc.indexOf('>Ailments</a>');
-            const finail = doc.indexOf('>Ecological Trees</a>')
+            const debail = doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Ailment/s:</h3>');
+            const finail = doc.indexOf('<h3 class="pi-data-label pi-secondary-font">Weakest to:</h3>')
             const docail = doc.substring(debail,finail)
             for (var i=0; i<ailments.length;i++){
               if (docail.includes(ailments[i])){
