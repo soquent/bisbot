@@ -35,7 +35,7 @@ module.exports = {
                                   monstre = monstre.concat("-");
                                   prettyname = prettyname.concat("-");
                                 }
-                              const a = capitalize(mots[i])
+                              var a = capitalize(mots[i])
   				                    monstre = monstre.concat(a);
   				                    prettyname = prettyname.concat(a);
                             }
