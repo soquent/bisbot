@@ -21,21 +21,23 @@ module.exports = {
 
 
 
-  		      var monstre = ""
-  		      var prettyname = ""
-  		        for (var i = 0; i < args.length; i++) {
-                if (i != 0) {
-                  prettyname = prettyname.concat(" ");
-  			           monstre = monstre.concat("_");
-                 }
+        var monstre = ""
+    		      var prettyname = ""
+    		        for (var i = 0; i < args.length; i++) {
+                  if (i != 0) {
+                    prettyname = prettyname.concat(" ");
+    			           monstre = monstre.concat("_");
+                   }
   			              if (args[i].includes("-")) {
-  				                    const [a,b] = args[i].split("-");
-  				                    monstre = monstre.concat(capitalize(a));
-  				                    prettyname = prettyname.concat(capitalize(a));
-  				                    monstre = monstre.concat("-");
-  				                    prettyname = prettyname.concat("-");
-  				                    monstre = monstre.concat(capitalize(b));
-  				                    prettyname = prettyname.concat(capitalize(b));
+                              const mots = args[i].split("-");
+                              for (var j=0;j < mots.length);j++){
+                              if (j!=0){
+                                monstre = monstre.concat("-");
+                                prettyname = prettyname.concat("-");
+                              }
+                              const a = capitalize(mots[i])
+  				                    monstre = monstre.concat(a);
+  				                    prettyname = prettyname.concat(a);
   			                       }
   			           else{
   		                  monstre = monstre.concat(capitalize(args[i]))
