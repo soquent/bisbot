@@ -56,6 +56,7 @@ module.exports = {
               if (doc2.includes(elements[i])){
                 weaknesses = weaknesses.concat(elements[i]+"\n")
                 }
+
               }
 
               if (weaknesses === "") {return "This meownster doesn't even exists !";}
@@ -70,7 +71,9 @@ module.exports = {
                 ail = ail.concat(ailments[i]).concat('\n');
               }
             }
-
+            if (ail === ""){
+              ail = "None."
+            }
               const deb2= doc.indexOf('<td colspan="2" style="background-color:#3A5766; color:#ffffff; font-weight:bold; font-size:9pt; text-align:center;"><b>Monster Hunter');
               const fin2 =  doc.indexOf('<b>Threat Level');
               var doc_thumb = doc.substring(deb2,fin2);
