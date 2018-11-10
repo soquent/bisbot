@@ -2,6 +2,8 @@ const fetch = require('node-fetch');
 const Discord = require('discord.js');
 const elements = ['Fire','Ice','Dragon','Thunder','Water'];
 const ailments = ['Poison','Deadly Poison','Paralysis', 'Sleep', 'Stun', 'Defense Down', 'Soiled', 'Fatigue','Snowman','Muddy','Blastblight','Frenzy Virus','Webbed','Bleeding','Confusion','Bubbleblight','Mucus','Ossified','Effluvium','Fireblight','Waterblight','Thunderblight','Iceblight','Dragonblight'];
+
+
 module.exports = {
     name: 'pali',
     description: 'i give one monster weaknesses',
@@ -21,9 +23,11 @@ module.exports = {
 
   		      var monstre = capitalize(args[0])
   		      var prettyname = capitalize(args[0])
-  		        for (var i = 1; i < args.length; i++) {
+  		        for (var i = 0; i < args.length; i++) {
+                if (i != 0) {
                   prettyname = prettyname.concat(" ");
   			           monstre = monstre.concat("_");
+                 }
   			              if (args[i].includes("-")) {
   				                    const [a,b] = args[i].split("-");
   				                    monstre = monstre.concat(capitalize(a));
@@ -56,7 +60,6 @@ module.exports = {
               if (doc2.includes(elements[i])){
                 weaknesses = weaknesses.concat(elements[i]+"\n")
                 }
-
               }
 
               if (weaknesses === "") {return "This meownster doesn't even exists !";}
@@ -92,7 +95,7 @@ module.exports = {
               .setColor("RANDOM")
               .setTitle("Monster : ".concat(prettyname))
               .setDescription(wiki)
-              .addField("Weaknesse(s) : ", weaknesses, true)
+              .addField("Weakness(es) : ", weaknesses, true)
               .addField("Ailment(s) : ",ail, true )
 
 
