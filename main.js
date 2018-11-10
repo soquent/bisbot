@@ -21,7 +21,7 @@ client.once('ready', () => {
 	edbisbot.send("bip boup. Mise à jour réussie. Je suis opérationnel ! :trumpet:");
 	console.log(client.guilds.size.toString())
 	const bis = client.users.find(user => user.id === "505055128705957889");
-	bis.setActivity(`Type weak <monster> to get started ! \n${client.guilds.size.toString()} hunting `, { type: 'WATCHING' })
+	ClientUser.setActivity(`Type weak <monster> to get started ! \n${client.guilds.size.toString()} hunting `, { type: 'WATCHING' })
   .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
   .catch(console.error);
 });
