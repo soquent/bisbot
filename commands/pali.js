@@ -31,14 +31,15 @@ module.exports = {
   			              if (args[i].includes("-")) {
                               const mots = args[i].split("-");
                               for (var j=0;j < mots.length;j++){
-                              if (j!=0){
-                                monstre = monstre.concat("-");
-                                prettyname = prettyname.concat("-");
-                              }
+                                if (j!=0){
+                                  monstre = monstre.concat("-");
+                                  prettyname = prettyname.concat("-");
+                                }
                               const a = capitalize(mots[i])
   				                    monstre = monstre.concat(a);
   				                    prettyname = prettyname.concat(a);
-  			                       }
+                            }
+                          }
   			           else{
   		                  monstre = monstre.concat(capitalize(args[i]))
   		                  prettyname = prettyname.concat(capitalize(args[i]));
