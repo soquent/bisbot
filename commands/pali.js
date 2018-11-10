@@ -30,7 +30,7 @@ module.exports = {
                    }
   			              if (args[i].includes("-")) {
                               const mots = args[i].split("-");
-                              for (var j=0;j < mots.length);j++){
+                              for (var j=0;j < mots.length;j++){
                               if (j!=0){
                                 monstre = monstre.concat("-");
                                 prettyname = prettyname.concat("-");
