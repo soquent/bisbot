@@ -22,6 +22,10 @@ module.exports = {
         message.channel.send('Je suis désolé :(');
 
     }
+
+      if message.author.id === id['charlotte']) {
+        message.channel.send('pls spank @Aya_Kasai#3571');
+    }
       if (msg.includes('zoe')) {
 
       message.channel.send("**NON**");
